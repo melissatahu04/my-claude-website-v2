@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Community Workshops: Menopause Understood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#FCF6F7; }
+    a { color:#A64F9D; }
+    a:hover { color:#6F3569; }
+  </style>
+</helmet>
+<div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
+  <dc-import name="Nav" current="workshops" hint-size="100%,66px"></dc-import>
+
+  <section style="max-width:900px; margin:0 auto; padding:clamp(48px,8vw,88px) clamp(20px,4vw,32px) 24px; text-align:center;">
+    <dc-import name="Icon" type="group" size="40" hint-size="40px,40px"></dc-import>
+    <h1 style="font-size:clamp(30px,5vw,46px); line-height:1.2; font-weight:400; color:#2E2E2E; margin:20px 0 20px;">Community Workshops</h1>
+    <p style="font-size:18px; line-height:1.8; font-weight:300; color:#5F5F5F; margin:0;">Live, in-person sessions held at local venues (libraries, community centres, studios) with plenty of room for real questions, not just a talk at you.</p>
+  </section>
+
+  <section style="max-width:900px; margin:56px auto 0; padding:0 clamp(20px,4vw,32px); display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:28px; text-align:center;">
+    <div>
+      <dc-import name="Icon" type="mail" size="30" hint-size="30px,30px"></dc-import>
+      <div style="font-size:16px; font-weight:500; color:#2E2E2E; margin:14px 0 6px;">Accessible pricing</div>
+      <div style="font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.6;">Workshops are kept low-cost, so they're within reach for everyone.</div>
+    </div>
+    <div>
+      <dc-import name="Icon" type="pin" size="30" hint-size="30px,30px"></dc-import>
+      <div style="font-size:16px; font-weight:500; color:#2E2E2E; margin:14px 0 6px;">In your community</div>
+      <div style="font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.6;">Hosted at local venues, close to home.</div>
+    </div>
+    <div>
+      <dc-import name="Icon" type="chat" size="30" hint-size="30px,30px"></dc-import>
+      <div style="font-size:16px; font-weight:500; color:#2E2E2E; margin:14px 0 6px;">Room for questions</div>
+      <div style="font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.6;">Real conversation, not just a lecture.</div>
+    </div>
+  </section>
+
+  <section style="max-width:720px; margin:64px auto 0; padding:0 clamp(20px,4vw,32px); text-align:center;">
+    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; padding:clamp(24px,5vw,40px);">
+      <dc-import name="Icon" type="pin" size="32" hint-size="32px,32px"></dc-import>
+      <h2 style="font-size:22px; font-weight:500; color:#2E2E2E; margin:16px 0 10px;">Want a workshop at your local venue?</h2>
+      <p style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7; margin:0 0 24px;">If you're part of a library, community centre, GP clinic or local group and would like to host a session, we'd love to hear from you.</p>
+      <a href="contact.dc.html" style="background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:14px 28px; border-radius:26px; font-size:14.5px; font-weight:500;" style-hover="background:#6F3569;">Request a Workshop</a>
+    </div>
+  </section>
+
+  <section style="background:#FFFFFF; border-top:1px solid #E8DDE3; border-bottom:1px solid #E8DDE3; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px); margin-top:80px;">
+    <div style="max-width:720px; margin:0 auto; text-align:center;">
+      <h2 style="font-size:clamp(22px,3.5vw,28px); font-weight:400; color:#2E2E2E; margin:0 0 16px;">No dates on the calendar yet</h2>
+      <p style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.8; margin:0 0 24px;">We're planning our very first community workshops now. Join our newsletter and we'll let you know as soon as a date and venue are confirmed near you.</p>
+      <a href="events.dc.html" style="text-decoration:none; color:#A64F9D; font-weight:500; font-size:14.5px; border:1px solid #A64F9D; padding:10px 20px; border-radius:22px;" style-hover="background:#A64F9D; color:#FFFFFF;">View Events Calendar</a>
+    </div>
+  </section>
+
+  <section style="max-width:720px; margin:0 auto; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px); text-align:center;">
+    <h2 style="font-size:clamp(24px,4vw,30px); font-weight:400; color:#2E2E2E; margin:0 0 16px;">Never miss a workshop</h2>
+    <p style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.7; margin:0 0 28px;">Join our newsletter to hear about new dates as soon as they're announced.</p>
+    <a href="newsletter.dc.html" style="background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500;" style-hover="background:#6F3569;">Join the Newsletter</a>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

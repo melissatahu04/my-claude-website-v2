@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Newsletter: Menopause Understood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#FCF6F7; }
+    a { color:#A64F9D; }
+    a:hover { color:#6F3569; }
+    ::placeholder { color:#5F5F5F; opacity:0.6; }
+  </style>
+</helmet>
+<div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
+  <dc-import name="Nav" current="newsletter" hint-size="100%,66px"></dc-import>
+
+  <section style="max-width:640px; margin:0 auto; padding:clamp(48px,8vw,88px) clamp(20px,4vw,32px) clamp(56px,8vw,96px); text-align:center;">
+    <dc-import name="Icon" type="mail" size="40" hint-size="40px,40px"></dc-import>
+    <h1 style="font-size:clamp(28px,5vw,44px); line-height:1.2; font-weight:400; color:#2E2E2E; margin:20px 0 20px;">Email Newsletter</h1>
+    <p style="font-size:18px; line-height:1.8; font-weight:300; color:#5F5F5F; margin:0 0 40px;">Subscribe for your free menopause symptom checklist, gentle monthly guidance, recent research translated into plain language, and first access when our courses, peer groups and workshops open.</p>
+
+    <sc-if value="{{ !submitted }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ handleSubmit }}" style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; padding:clamp(24px,5vw,40px); display:flex; flex-direction:column; gap:16px; text-align:left;">
+        <label style="font-size:14px; font-weight:500; color:#2E2E2E;">First name
+          <input type="text" required="" value="{{ name }}" onChange="{{ onNameChange }}" placeholder="Jane" style="display:block; width:100%; box-sizing:border-box; margin-top:6px; padding:13px 16px; border-radius:10px; border:1px solid #E8DDE3; font-family:'Poppins',sans-serif; font-size:15px; color:#2E2E2E; background:#FCF6F7;" />
+        </label>
+        <label style="font-size:14px; font-weight:500; color:#2E2E2E;">Email address
+          <input type="email" required="" value="{{ email }}" onChange="{{ onEmailChange }}" placeholder="jane@example.com" style="display:block; width:100%; box-sizing:border-box; margin-top:6px; padding:13px 16px; border-radius:10px; border:1px solid #E8DDE3; font-family:'Poppins',sans-serif; font-size:15px; color:#2E2E2E; background:#FCF6F7;" />
+        </label>
+        <button type="submit" style="margin-top:8px; background:#A64F9D; color:#FFFFFF; border:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500; font-family:'Poppins',sans-serif; cursor:pointer;" style-hover="background:#6F3569;">Subscribe</button>
+        <div style="font-size:12.5px; font-weight:300; color:#5F5F5F; text-align:center;">We respect your privacy. Unsubscribe any time.</div>
+      </form>
+    </sc-if>
+    <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; padding:clamp(32px,6vw,56px) clamp(24px,5vw,40px); display:flex; flex-direction:column; align-items:center; gap:16px;">
+        <dc-import name="Icon" type="check" size="36" hint-size="36px,36px"></dc-import>
+        <div style="font-size:20px; font-weight:500; color:#2E2E2E;">You're subscribed, {{ name }}!</div>
+        <div style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7;">Look out for our next issue in your inbox.</div>
+      </div>
+    </sc-if>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { name: '', email: '', submitted: false };
+  renderVals() {
+    return {
+      name: this.state.name,
+      email: this.state.email,
+      submitted: this.state.submitted,
+      onNameChange: (e) => this.setState({ name: e.target.value }),
+      onEmailChange: (e) => this.setState({ email: e.target.value }),
+      handleSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Free Resources: Menopause Understood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#FCF6F7; }
+    a { color:#A64F9D; }
+    a:hover { color:#6F3569; }
+  </style>
+</helmet>
+<div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
+  <dc-import name="Nav" current="resources" hint-size="100%,66px"></dc-import>
+
+  <section style="max-width:900px; margin:0 auto; padding:clamp(48px,8vw,88px) clamp(20px,4vw,32px) 24px; text-align:center;">
+    <dc-import name="Icon" type="lightbulb" size="40" hint-size="40px,40px"></dc-import>
+    <h1 style="font-size:clamp(30px,5vw,46px); line-height:1.2; font-weight:400; color:#2E2E2E; margin:20px 0 20px;">Free Resources</h1>
+    <p style="font-size:18px; line-height:1.8; font-weight:300; color:#5F5F5F; margin:0;">Simple, practical tools you can use today. No course, no cost.</p>
+  </section>
+
+  <section style="max-width:720px; margin:56px auto 0; padding:0 clamp(20px,4vw,32px);">
+    <div style="background:#FFFFFF; border:2px solid #A64F9D; border-radius:20px; padding:clamp(24px,5vw,40px); display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px;">
+      <dc-import name="Icon" type="course" size="34" hint-size="34px,34px"></dc-import>
+      <div style="font-size:20px; font-weight:500; color:#2E2E2E;">Free Menopause Symptom Checklist</div>
+      <div style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7; max-width:460px;">A simple printable to help you notice patterns in your symptoms, and feel prepared for your next doctor's appointment.</div>
+      <a href="newsletter.dc.html" style="margin-top:8px; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:14px 28px; border-radius:26px; font-size:14.5px; font-weight:500;" style-hover="background:#6F3569;">Get the Free Checklist</a>
+    </div>
+  </section>
+
+  <section style="max-width:900px; margin:72px auto 0; padding:0 clamp(20px,4vw,32px); text-align:center;">
+    <h2 style="font-size:26px; font-weight:400; color:#2E2E2E; margin:0 0 12px;">More on the way</h2>
+    <p style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7; margin:0 0 32px;">We're building out a small library of guides. Join the newsletter and they'll land straight in your inbox as they're ready.</p>
+  </section>
+  <section style="max-width:900px; margin:0 auto 88px; padding:0 clamp(20px,4vw,32px); display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px;">
+    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:18px; padding:28px; display:flex; gap:16px; align-items:flex-start;">
+      <dc-import name="Icon" type="chat" size="26" hint-size="26px,26px"></dc-import>
+      <div>
+        <div style="font-size:15.5px; font-weight:500; color:#2E2E2E;">Talking to Your Doctor</div>
+        <div style="font-size:13.5px; font-weight:300; color:#5F5F5F; margin-top:4px;">Coming soon</div>
+      </div>
+    </div>
+    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:18px; padding:28px; display:flex; gap:16px; align-items:flex-start;">
+      <dc-import name="Icon" type="briefcase" size="26" hint-size="26px,26px"></dc-import>
+      <div>
+        <div style="font-size:15.5px; font-weight:500; color:#2E2E2E;">Talking to Your Manager</div>
+        <div style="font-size:13.5px; font-weight:300; color:#5F5F5F; margin-top:4px;">Coming soon</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#A64F9D; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px);">
+    <div style="max-width:720px; margin:0 auto; text-align:center;">
+      <h2 style="font-size:clamp(24px,4vw,32px); font-weight:400; color:#FFFFFF; margin:0 0 16px;">Want more, straight to your inbox?</h2>
+      <p style="font-size:17px; font-weight:300; color:#FCF6F7; line-height:1.7; margin:0 0 32px;">New resources and gentle guidance, once a month.</p>
+      <a href="newsletter.dc.html" style="background:#FFFFFF; color:#A64F9D; text-decoration:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500;" style-hover="background:#FCF6F7;">Join the Newsletter</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

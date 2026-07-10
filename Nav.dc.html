@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</helmet>
+<header style="background:#FCF6F7; border-bottom:1px solid #E8DDE3; position:sticky; top:0; z-index:50;">
+  <div style="max-width:1200px; margin:0 auto; padding:14px clamp(20px,4vw,32px); display:flex; align-items:center; justify-content:space-between; gap:20px;">
+    <a href="index.dc.html" style="display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0;">
+      <img src="assets/logo.png" alt="Menopause Understood" style="height:56px; width:auto; display:block;" />
+    </a>
+
+    <sc-if value="{{ !isMobile }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex; align-items:center; gap:26px; flex-wrap:wrap; font-family:'Poppins',sans-serif;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="8">
+          <a href="{{ item.href }}" style="{{ item.style }}">{{ item.label }}</a>
+        </sc-for>
+      </nav>
+      <a href="contact.dc.html" style="background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:10px 22px; border-radius:24px; font-family:'Poppins',sans-serif; font-weight:500; font-size:15px; white-space:nowrap; flex-shrink:0;" style-hover="background:#6F3569;">Contact Us</a>
+    </sc-if>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="background:none; border:none; padding:6px; display:flex; flex-direction:column; gap:5px; cursor:pointer; flex-shrink:0;">
+        <span style="width:24px; height:2px; background:#2E2E2E; display:block; border-radius:2px;"></span>
+        <span style="width:24px; height:2px; background:#2E2E2E; display:block; border-radius:2px;"></span>
+        <span style="width:24px; height:2px; background:#2E2E2E; display:block; border-radius:2px;"></span>
+      </button>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{ showMobilePanel }}" hint-placeholder-val="{{ false }}">
+    <nav style="display:flex; flex-direction:column; padding:8px clamp(20px,4vw,32px) 24px; border-top:1px solid #E8DDE3; font-family:'Poppins',sans-serif; background:#FCF6F7;">
+      <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="8">
+        <a href="{{ item.href }}" style="{{ item.mobileStyle }}" onClick="{{ closeMenu }}">{{ item.label }}</a>
+      </sc-for>
+      <a href="contact.dc.html" onClick="{{ closeMenu }}" style="margin-top:14px; text-align:center; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:12px 22px; border-radius:24px; font-weight:500; font-size:15px;" style-hover="background:#6F3569;">Contact Us</a>
+    </nav>
+  </sc-if>
+</header>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:80}, &quot;current&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;home&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;about&quot;,&quot;courses&quot;,&quot;peer-groups&quot;,&quot;workshops&quot;,&quot;events&quot;,&quot;resources&quot;,&quot;workplace&quot;,&quot;newsletter&quot;,&quot;contact&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { isMobile: false, menuOpen: false };
+
+  computeIsMobile = () => typeof window !== 'undefined' && window.innerWidth < 880;
+
+  handleResize = () => {
+    const nowMobile = this.computeIsMobile();
+    if (nowMobile !== this.state.isMobile) {
+      this.setState({ isMobile: nowMobile, menuOpen: nowMobile ? this.state.menuOpen : false });
+    }
+  };
+
+  componentDidMount() {
+    this.setState({ isMobile: this.computeIsMobile() });
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+  closeMenu = () => this.setState({ menuOpen: false });
+
+  renderVals() {
+    const current = this.props.current || 'home';
+    const base = 'text-decoration:none; font-size:15px; font-weight:400; color:#2E2E2E; padding-bottom:4px; border-bottom:2px solid transparent;';
+    const active = 'text-decoration:none; font-size:15px; font-weight:500; color:#A64F9D; padding-bottom:4px; border-bottom:2px solid #A64F9D;';
+    const mobileBase = 'text-decoration:none; font-size:16px; font-weight:400; color:#2E2E2E; padding:12px 0; border-bottom:1px solid #E8DDE3;';
+    const mobileActive = 'text-decoration:none; font-size:16px; font-weight:500; color:#A64F9D; padding:12px 0; border-bottom:1px solid #E8DDE3;';
+
+    const items = [
+      { key: 'home', href: 'index.dc.html', label: 'Home' },
+      { key: 'about', href: 'about.dc.html', label: 'About' },
+      { key: 'courses', href: 'courses.dc.html', label: 'Courses' },
+      { key: 'peer-groups', href: 'peer-groups.dc.html', label: 'Peer Groups' },
+      { key: 'workshops', href: 'workshops.dc.html', label: 'Workshops' },
+      { key: 'events', href: 'events.dc.html', label: 'Events' },
+      { key: 'workplace', href: 'workplace.dc.html', label: 'For Employers' },
+      { key: 'resources', href: 'resources.dc.html', label: 'Resources' },
+    ];
+
+    const navItems = items.map(it => ({
+      ...it,
+      style: (it.key === current ? active : base) + (it.key === 'workplace' ? ' font-size:14px;' : ''),
+      mobileStyle: it.key === current ? mobileActive : mobileBase,
+    }));
+
+    return {
+      navItems,
+      isMobile: this.state.isMobile,
+      showMobilePanel: this.state.isMobile && this.state.menuOpen,
+      toggleMenu: this.toggleMenu,
+      closeMenu: this.closeMenu,
+    };
+  }
+}
+
+</script>
+</body>
+</html>

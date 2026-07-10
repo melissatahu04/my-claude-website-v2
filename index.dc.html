@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Menopause Understood: Support for Peri, Meno & Post-Menopause</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#FCF6F7; }
+    a { color:#A64F9D; }
+    a:hover { color:#6F3569; }
+  </style>
+</helmet>
+<div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
+  <dc-import name="Nav" current="home" hint-size="100%,66px"></dc-import>
+
+  <section style="max-width:1200px; margin:0 auto; padding:clamp(48px,8vw,88px) clamp(20px,4vw,32px) clamp(56px,8vw,96px); display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:clamp(32px,6vw,64px); align-items:center;">
+    <div>
+      <h1 style="font-size:clamp(32px,5.5vw,52px); line-height:1.15; font-weight:400; color:#2E2E2E; margin:0 0 24px;">Real support for perimenopause, menopause and beyond.</h1>
+      <p style="font-size:19px; line-height:1.7; font-weight:300; color:#5F5F5F; margin:0 0 36px; max-width:520px;">If you're feeling dismissed, confused or overwhelmed, you're in the right place. We offer clear education and warm community, so you can feel confident and supported through this stage of life.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="courses.dc.html" style="background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:16px 32px; border-radius:28px; font-size:16px; font-weight:500;" style-hover="background:#6F3569;">Explore Our Courses</a>
+        <a href="about.dc.html" style="background:#FFFFFF; color:#2E2E2E; text-decoration:none; padding:16px 32px; border-radius:28px; font-size:16px; font-weight:500; border:1px solid #E8DDE3;" style-hover="border-color:#A64F9D; color:#A64F9D;">Learn About Us</a>
+      </div>
+    </div>
+    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:24px; padding:clamp(28px,5vw,48px); display:flex; flex-direction:column; gap:28px;">
+      <div style="display:flex; gap:18px; align-items:flex-start;">
+        <dc-import name="Icon" type="check" size="30" hint-size="30px,30px"></dc-import>
+        <div>
+          <div style="font-size:16px; font-weight:500; color:#2E2E2E; margin-bottom:4px;">Evidence-based education</div>
+          <div style="font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.6;">Grounded in real research, written in plain English.</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:18px; align-items:flex-start;">
+        <dc-import name="Icon" type="peers" size="30" hint-size="30px,30px"></dc-import>
+        <div>
+          <div style="font-size:16px; font-weight:500; color:#2E2E2E; margin-bottom:4px;">A community that listens</div>
+          <div style="font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.6;">Small peer groups where you're truly heard.</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:18px; align-items:flex-start;">
+        <dc-import name="Icon" type="leaf" size="30" hint-size="30px,30px"></dc-import>
+        <div>
+          <div style="font-size:16px; font-weight:500; color:#2E2E2E; margin-bottom:4px;">Gentle, judgement-free pace</div>
+          <div style="font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.6;">Move through it at whatever pace feels right for you.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#FFFFFF; border-top:1px solid #E8DDE3; border-bottom:1px solid #E8DDE3; padding:clamp(56px,8vw,96px) clamp(20px,4vw,32px);">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div style="text-align:center; max-width:640px; margin:0 auto 64px;">
+        <h2 style="font-size:clamp(26px,4vw,36px); font-weight:400; color:#2E2E2E; margin:0 0 16px;">Ways we'll support you</h2>
+        <p style="font-size:17px; font-weight:300; color:#5F5F5F; line-height:1.7; margin:0;">Six ways to find clarity, connection and confidence, wherever you are in your journey.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:28px;">
+        <a href="courses.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:32px clamp(24px,4vw,32px); display:flex; flex-direction:column; gap:18px; position:relative;" style-hover="border-color:#A64F9D;">
+          <dc-import name="Icon" type="course" size="34" hint-size="34px,34px"></dc-import>
+          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Online Courses</div>
+          <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Short, self-paced courses on symptoms, hormones and what actually helps.</div>
+        </a>
+        <a href="peer-groups.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
+          <dc-import name="Icon" type="peers" size="34" hint-size="34px,34px"></dc-import>
+          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">In This Together: Peer Groups</div>
+          <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Small, guided groups of women sharing this stage of life, over a 9-week term.</div>
+        </a>
+        <a href="workshops.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
+          <dc-import name="Icon" type="group" size="34" hint-size="34px,34px"></dc-import>
+          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Community Workshops</div>
+          <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Live sessions on topics that matter, with room for real questions.</div>
+        </a>
+        <a href="workplace.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
+          <dc-import name="Icon" type="briefcase" size="34" hint-size="34px,34px"></dc-import>
+          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Workplace Workshops</div>
+          <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Helping employers build genuinely supportive workplaces.</div>
+        </a>
+        <a href="newsletter.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
+          <dc-import name="Icon" type="mail" size="34" hint-size="34px,34px"></dc-import>
+          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Email Newsletter</div>
+          <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Gentle guidance, honest stories and research translated into plain language, monthly.</div>
+        </a>
+        <a href="resources.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
+          <dc-import name="Icon" type="lightbulb" size="34" hint-size="34px,34px"></dc-import>
+          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Free Resources</div>
+          <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">A free symptom checklist and guides you can use right away, at no cost.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:820px; margin:0 auto; padding:clamp(56px,9vw,100px) clamp(20px,4vw,32px); text-align:center;">
+    <dc-import name="Icon" type="heart" size="40" hint-size="40px,40px"></dc-import>
+    <p style="font-size:clamp(18px,2.6vw,24px); font-weight:300; line-height:1.6; color:#2E2E2E; margin:24px 0 16px;">Menopause Understood began with one woman's own "why did no one tell me this?" moment, and grew into a place where you don't have to work it out on your own.</p>
+    <a href="about.dc.html" style="font-size:15px; font-weight:500; text-decoration:none;">Read our story →</a>
+  </section>
+
+  <section style="background:#A64F9D; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px);">
+    <div style="max-width:720px; margin:0 auto; text-align:center;">
+      <h2 style="font-size:clamp(24px,4vw,32px); font-weight:400; color:#FFFFFF; margin:0 0 16px;">Start with something free</h2>
+      <p style="font-size:17px; font-weight:300; color:#FCF6F7; line-height:1.7; margin:0 0 32px;">Join our newsletter for a free symptom checklist, gentle monthly guidance, and recent research translated into plain language.</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="newsletter.dc.html" style="background:#FFFFFF; color:#A64F9D; text-decoration:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500;" style-hover="background:#FCF6F7;">Join the Newsletter</a>
+        <a href="resources.dc.html" style="background:transparent; color:#FFFFFF; text-decoration:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500; border:1px solid #FFFFFF;">Browse Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

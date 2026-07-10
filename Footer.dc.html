@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<footer style="background:#FFFFFF; border-top:1px solid #E8DDE3; font-family:'Poppins',sans-serif;">
+  <div style="max-width:1200px; margin:0 auto; padding:56px clamp(20px,4vw,32px) 32px; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px;">
+    <div>
+      <img src="assets/logo.png" alt="Menopause Understood" style="height:30px; width:auto; display:block; margin-bottom:14px;" />
+      <p style="color:#5F5F5F; font-size:14px; line-height:1.7; font-weight:300; max-width:260px; margin:0;">Education, community and support for women navigating perimenopause, menopause and beyond.</p>
+    </div>
+    <div>
+      <div style="color:#2E2E2E; font-size:14px; font-weight:500; margin-bottom:14px;">Learn</div>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <a href="courses.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Online Courses</a>
+        <a href="peer-groups.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">In This Together (Peer Groups)</a>
+        <a href="workshops.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Community Workshops</a>
+        <a href="events.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Events Calendar</a>
+        <a href="resources.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Free Resources</a>
+      </div>
+    </div>
+    <div>
+      <div style="color:#2E2E2E; font-size:14px; font-weight:500; margin-bottom:14px;">Organisation</div>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <a href="about.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">About Us</a>
+        <a href="workplace.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Workplace Workshops</a>
+        <a href="contact.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div style="color:#2E2E2E; font-size:14px; font-weight:500; margin-bottom:14px;">Stay in touch</div>
+      <p style="color:#5F5F5F; font-size:14px; font-weight:300; line-height:1.7; margin:0 0 14px;">Gentle guidance, honest stories and research translated into plain language, monthly.</p>
+      <a href="newsletter.dc.html" style="display:inline-block; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:10px 20px; border-radius:22px; font-size:14px; font-weight:500;" style-hover="background:#6F3569;">Subscribe</a>
+    </div>
+  </div>
+  <div style="max-width:1200px; margin:0 auto; padding:20px clamp(20px,4vw,32px); border-top:1px solid #E8DDE3; color:#5F5F5F; font-size:13px; font-weight:300;">
+    © {{ currentYear }} Menopause Understood. All rights reserved.
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:320}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { currentYear: new Date().getFullYear() };
+  }
+}
+
+</script>
+</body>
+</html>

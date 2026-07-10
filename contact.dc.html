@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Contact: Menopause Understood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#FCF6F7; }
+    a { color:#A64F9D; }
+    a:hover { color:#6F3569; }
+    ::placeholder { color:#5F5F5F; opacity:0.6; }
+  </style>
+</helmet>
+<div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
+  <dc-import name="Nav" current="contact" hint-size="100%,66px"></dc-import>
+
+  <section style="max-width:1100px; margin:0 auto; padding:clamp(48px,8vw,88px) clamp(20px,4vw,32px) clamp(56px,8vw,96px); display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:clamp(32px,6vw,64px);">
+    <div>
+      <div style="color:#A64F9D; font-size:14px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:18px;">Get in Touch</div>
+      <h1 style="font-size:clamp(28px,4.5vw,42px); line-height:1.2; font-weight:400; color:#2E2E2E; margin:0 0 20px;">We'd love to hear from you.</h1>
+      <p style="font-size:17px; line-height:1.8; font-weight:300; color:#5F5F5F; margin:0 0 40px;">Questions about courses, peer groups, or bringing a workshop to your workplace, reach out any time.</p>
+      <div style="display:flex; flex-direction:column; gap:22px;">
+        <div style="display:flex; gap:16px; align-items:flex-start;">
+          <dc-import name="Icon" type="mail" size="26" hint-size="26px,26px"></dc-import>
+          <div>
+            <div style="font-size:15px; font-weight:500; color:#2E2E2E;">Email</div>
+            <a href="mailto:hello@menopauseunderstood.com" style="font-size:14.5px; font-weight:300; text-decoration:none;">hello@menopauseunderstood.com</a>
+          </div>
+        </div>
+        <div style="display:flex; gap:16px; align-items:flex-start;">
+          <dc-import name="Icon" type="pin" size="26" hint-size="26px,26px"></dc-import>
+          <div>
+            <div style="font-size:15px; font-weight:500; color:#2E2E2E;">Based in</div>
+            <div style="font-size:14.5px; font-weight:300; color:#5F5F5F;">Serving clients online, worldwide</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:16px; align-items:flex-start;">
+          <dc-import name="Icon" type="clock" size="26" hint-size="26px,26px"></dc-import>
+          <div>
+            <div style="font-size:15px; font-weight:500; color:#2E2E2E;">Response time</div>
+            <div style="font-size:14.5px; font-weight:300; color:#5F5F5F;">Within 1–2 business days</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ !submitted }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ handleSubmit }}" style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; padding:clamp(24px,5vw,40px); display:flex; flex-direction:column; gap:16px;">
+        <label style="font-size:14px; font-weight:500; color:#2E2E2E;">Name
+          <input type="text" required="" value="{{ formName }}" onChange="{{ onNameChange }}" placeholder="Your name" style="display:block; width:100%; box-sizing:border-box; margin-top:6px; padding:13px 16px; border-radius:10px; border:1px solid #E8DDE3; font-family:'Poppins',sans-serif; font-size:15px; color:#2E2E2E; background:#FCF6F7;" />
+        </label>
+        <label style="font-size:14px; font-weight:500; color:#2E2E2E;">Email address
+          <input type="email" required="" value="{{ formEmail }}" onChange="{{ onEmailChange }}" placeholder="you@example.com" style="display:block; width:100%; box-sizing:border-box; margin-top:6px; padding:13px 16px; border-radius:10px; border:1px solid #E8DDE3; font-family:'Poppins',sans-serif; font-size:15px; color:#2E2E2E; background:#FCF6F7;" />
+        </label>
+        <label style="font-size:14px; font-weight:500; color:#2E2E2E;">I'm interested in
+          <select value="{{ topic }}" onChange="{{ onTopicChange }}" style="display:block; width:100%; box-sizing:border-box; margin-top:6px; padding:13px 16px; border-radius:10px; border:1px solid #E8DDE3; font-family:'Poppins',sans-serif; font-size:15px; color:#2E2E2E; background:#FCF6F7;">
+            <option value="courses">Online Courses</option>
+            <option value="peer-groups">Peer Group Program</option>
+            <option value="workshops">Community Workshops</option>
+            <option value="workplace">Workplace Workshops</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+        <label style="font-size:14px; font-weight:500; color:#2E2E2E;">Message
+          <textarea required="" rows="4" value="{{ message }}" onChange="{{ onMessageChange }}" placeholder="How can we help?" style="display:block; width:100%; box-sizing:border-box; margin-top:6px; padding:13px 16px; border-radius:10px; border:1px solid #E8DDE3; font-family:'Poppins',sans-serif; font-size:15px; color:#2E2E2E; background:#FCF6F7; resize:vertical;"></textarea>
+        </label>
+        <button type="submit" style="margin-top:8px; background:#A64F9D; color:#FFFFFF; border:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500; font-family:'Poppins',sans-serif; cursor:pointer;" style-hover="background:#6F3569;">Send Message</button>
+      </form>
+    </sc-if>
+    <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; padding:clamp(32px,6vw,56px) clamp(24px,5vw,40px); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; text-align:center;">
+        <dc-import name="Icon" type="check" size="36" hint-size="36px,36px"></dc-import>
+        <div style="font-size:20px; font-weight:500; color:#2E2E2E;">Thanks, {{ formName }}, message sent.</div>
+        <div style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7;">We'll get back to you within 1–2 business days.</div>
+      </div>
+    </sc-if>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { formName: '', formEmail: '', topic: 'courses', message: '', submitted: false };
+  renderVals() {
+    return {
+      formName: this.state.formName,
+      formEmail: this.state.formEmail,
+      topic: this.state.topic,
+      message: this.state.message,
+      submitted: this.state.submitted,
+      onNameChange: (e) => this.setState({ formName: e.target.value }),
+      onEmailChange: (e) => this.setState({ formEmail: e.target.value }),
+      onTopicChange: (e) => this.setState({ topic: e.target.value }),
+      onMessageChange: (e) => this.setState({ message: e.target.value }),
+      handleSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Events & Calendar: Menopause Understood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#FCF6F7; }
+    a { color:#A64F9D; }
+    a:hover { color:#6F3569; }
+  </style>
+</helmet>
+<div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
+  <dc-import name="Nav" current="events" hint-size="100%,66px"></dc-import>
+
+  <section style="max-width:900px; margin:0 auto; padding:clamp(48px,8vw,88px) clamp(20px,4vw,32px) 24px; text-align:center;">
+    <dc-import name="Icon" type="calendar" size="40" hint-size="40px,40px"></dc-import>
+    <h1 style="font-size:clamp(30px,5vw,46px); line-height:1.2; font-weight:400; color:#2E2E2E; margin:20px 0 20px;">Events & Calendar</h1>
+    <p style="font-size:18px; line-height:1.8; font-weight:300; color:#5F5F5F; margin:0;">Every upcoming peer group term and community workshop, all in one place.</p>
+  </section>
+
+  <section style="max-width:1100px; margin:64px auto; padding:0 clamp(20px,4vw,32px); display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:28px;">
+    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; padding:clamp(24px,5vw,36px); display:flex; flex-direction:column; gap:16px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <dc-import name="Icon" type="peers" size="30" hint-size="30px,30px"></dc-import>
+        <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Peer Group Terms: In This Together</div>
+      </div>
+      <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">A new 9-week term begins every few months, capped at 8 women, meeting once a week online. Each term runs for 9 weeks, followed by a 2-week break before the next one begins. Each week covers a different topic — from body changes to long-term health, lifestyle and relationships.</div>
+      <a href="peer-groups.dc.html" style="align-self:flex-start; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:12px 24px; border-radius:24px; font-size:14px; font-weight:500;" style-hover="background:#6F3569;">Join the Waitlist</a>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; padding:clamp(24px,5vw,36px); display:flex; flex-direction:column; gap:16px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <dc-import name="Icon" type="group" size="30" hint-size="30px,30px"></dc-import>
+        <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Community Workshops</div>
+      </div>
+      <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Live, in-person sessions at local venues on topics that matter, kept affordable and accessible to all.</div>
+      <a href="workshops.dc.html" style="align-self:flex-start; background:#FFFFFF; color:#A64F9D; text-decoration:none; padding:12px 24px; border-radius:24px; font-size:14px; font-weight:500; border:1px solid #A64F9D;" style-hover="background:#A64F9D; color:#FFFFFF;">Get Notified</a>
+    </div>
+  </section>
+
+  <section style="max-width:1100px; margin:0 auto 32px; padding:0 clamp(20px,4vw,32px);">
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:20px;">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <button onClick="{{ goPrevMonth }}" aria-label="Previous month" style="width:36px; height:36px; border-radius:50%; border:1px solid #E8DDE3; background:#FFFFFF; color:#A64F9D; font-size:16px; font-family:'Poppins',sans-serif; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="border-color:#A64F9D;">‹</button>
+        <h2 style="font-size:24px; font-weight:500; color:#2E2E2E; margin:0; min-width:190px; text-align:center;">{{ monthLabel }} {{ year }}</h2>
+        <button onClick="{{ goNextMonth }}" aria-label="Next month" style="width:36px; height:36px; border-radius:50%; border:1px solid #E8DDE3; background:#FFFFFF; color:#A64F9D; font-size:16px; font-family:'Poppins',sans-serif; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="border-color:#A64F9D;">›</button>
+      </div>
+      <div style="display:flex; gap:20px; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:300; color:#5F5F5F;"><span style="width:10px; height:10px; border-radius:50%; background:#6F3569; display:inline-block;"></span>Peer Group Session</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:300; color:#5F5F5F;"><span style="width:10px; height:10px; background:#C97FB9; display:inline-block;"></span>Community Workshop</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:300; color:#5F5F5F;"><span style="width:10px; height:10px; border-radius:50%; background:#A64F9D; display:inline-block;"></span>Today</div>
+      </div>
+    </div>
+    <p style="max-width:700px; margin:0 0 20px; font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.7;">Plum marks a peer group session, mauve marks a community workshop, and today's date is highlighted in purple. See the cards above for full details on each program and how to join.</p>
+    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; overflow-x:auto;">
+      <div style="min-width:560px;">
+        <div style="display:grid; grid-template-columns:repeat(7,1fr); background:#FCF6F7; border-bottom:1px solid #E8DDE3;">
+          <sc-for list="{{ weekdayLabels }}" as="wd" hint-placeholder-count="7">
+            <div style="padding:12px 6px; text-align:center; font-size:12px; font-weight:500; color:#5F5F5F; letter-spacing:0.04em; text-transform:uppercase;">{{ wd }}</div>
+          </sc-for>
+        </div>
+        <sc-for list="{{ weeks }}" as="week" hint-placeholder-count="6">
+          <div style="display:grid; grid-template-columns:repeat(7,1fr); border-bottom:1px solid #E8DDE3;">
+            <sc-for list="{{ week }}" as="cell" hint-placeholder-count="7">
+              <div style="min-height:80px; padding:8px; border-right:1px solid #E8DDE3; display:flex; flex-direction:column; gap:6px; {{ cell.cellBg }}">
+                <sc-if value="{{ cell.day }}" hint-placeholder-val="{{ true }}">
+                  <div style="{{ cell.dayStyle }}">{{ cell.dayLabel }}</div>
+                  <sc-for list="{{ cell.events }}" as="ev" hint-placeholder-count="0">
+                    <div style="background:{{ ev.bg }}; color:#FFFFFF; border-radius:8px; padding:4px 6px; font-size:10.5px; font-weight:500; line-height:1.4;">{{ ev.title }}</div>
+                  </sc-for>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="text-align:center; font-size:13px; font-weight:300; color:#5F5F5F; font-style:italic; margin-top:16px;">Example view. Real sessions will appear here once dates are confirmed.</div>
+  </section>
+
+  <section style="background:#FFFFFF; border-top:1px solid #E8DDE3; border-bottom:1px solid #E8DDE3; padding:64px 32px; text-align:center;">
+    <p style="max-width:640px; margin:0 auto; font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7;">This calendar fills in as we lock in dates. Subscribe to our newsletter and you'll be the first to know the moment a peer group term or workshop is confirmed.</p>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = (() => {
+    const now = new Date();
+    return { year: now.getFullYear(), month: now.getMonth() };
+  })();
+
+  // Illustrative example events, keyed by "YYYY-M-D"
+  sampleEvents = {
+    '2026-7-4': [{ title: 'Peer Group Session', bg: '#6F3569' }],
+    '2026-7-11': [{ title: 'Peer Group Session', bg: '#6F3569' }],
+    '2026-7-15': [{ title: 'Workshop: Sleep & Menopause', bg: '#C97FB9' }],
+    '2026-7-18': [{ title: 'Peer Group Session', bg: '#6F3569' }],
+    '2026-7-25': [{ title: 'Peer Group Session', bg: '#6F3569' }],
+    '2026-7-29': [{ title: 'Workshop: Mood & Midlife', bg: '#C97FB9' }],
+  };
+
+  goPrevMonth = () => {
+    this.setState(s => {
+      const m = s.month - 1;
+      return m < 0 ? { year: s.year - 1, month: 11 } : { year: s.year, month: m };
+    });
+  };
+  goNextMonth = () => {
+    this.setState(s => {
+      const m = s.month + 1;
+      return m > 11 ? { year: s.year + 1, month: 0 } : { year: s.year, month: m };
+    });
+  };
+
+  renderVals() {
+    const { year, month } = this.state;
+    const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const firstWeekday = new Date(Date.UTC(year, month, 1)).getUTCDay();
+    const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+    const today = new Date();
+    const isCurrentMonth = today.getFullYear() === year && today.getMonth() === month;
+    const todayDate = today.getDate();
+    const cells = [];
+    for (let i = 0; i < firstWeekday; i++) cells.push({ day: null, events: [] });
+    for (let d = 1; d <= daysInMonth; d++) {
+      const key = `${year}-${month}-${d}`;
+      const isToday = isCurrentMonth && d === todayDate;
+      cells.push({
+        day: d,
+        dayLabel: isToday ? `${d} · Today` : String(d),
+        events: this.sampleEvents[key] || [],
+        cellBg: isToday ? 'background:#FCF6F7;' : '',
+        dayStyle: isToday
+          ? 'display:inline-block; font-size:12.5px; font-weight:600; color:#FFFFFF; background:#A64F9D; padding:2px 8px; border-radius:10px;'
+          : 'font-size:13.5px; font-weight:500; color:#2E2E2E;',
+      });
+    }
+    while (cells.length % 7 !== 0) cells.push({ day: null, events: [] });
+    const weeks = [];
+    for (let i = 0; i < cells.length; i += 7) weeks.push(cells.slice(i, i + 7));
+    return {
+      weekdayLabels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      weeks,
+      monthLabel: monthNames[month],
+      year,
+      goPrevMonth: this.goPrevMonth,
+      goNextMonth: this.goNextMonth,
+    };
+  }
+}
+
+</script>
+</body>
+</html>

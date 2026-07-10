@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<span style="display:inline-flex; width:{{ px }}px; height:{{ px }}px;">
+<sc-if value="{{ isCourse }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="10" width="36" height="26" rx="4"></rect>
+    <line x1="6" y1="18" x2="42" y2="18"></line>
+    <line x1="14" y1="26" x2="28" y2="26"></line>
+    <line x1="14" y1="31" x2="24" y2="31"></line>
+  </svg>
+</sc-if>
+<sc-if value="{{ isPeers }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="18" cy="17" r="7"></circle>
+    <circle cx="33" cy="20" r="5.5"></circle>
+    <path d="M6 40c0-8 5.5-13 12-13s12 5 12 13"></path>
+    <path d="M31 30c5 0.5 8.5 4.5 8.5 10"></path>
+  </svg>
+</sc-if>
+<sc-if value="{{ isGroup }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="10" r="5.5"></circle>
+    <circle cx="10" cy="30" r="5.5"></circle>
+    <circle cx="38" cy="30" r="5.5"></circle>
+    <line x1="21" y1="14" x2="13" y2="26"></line>
+    <line x1="27" y1="14" x2="35" y2="26"></line>
+    <line x1="16" y1="33" x2="32" y2="33"></line>
+  </svg>
+</sc-if>
+<sc-if value="{{ isBriefcase }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="16" width="36" height="24" rx="4"></rect>
+    <path d="M18 16v-4a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v4"></path>
+    <line x1="6" y1="27" x2="42" y2="27"></line>
+  </svg>
+</sc-if>
+<sc-if value="{{ isMail }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="10" width="36" height="28" rx="4"></rect>
+    <path d="M8 13l16 13 16-13"></path>
+  </svg>
+</sc-if>
+<sc-if value="{{ isLightbulb }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="18" r="12"></circle>
+    <line x1="18" y1="34" x2="30" y2="34"></line>
+    <line x1="19" y1="40" x2="29" y2="40"></line>
+    <line x1="24" y1="30" x2="24" y2="34"></line>
+  </svg>
+</sc-if>
+<sc-if value="{{ isHeart }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 40C12 32 6 25 6 17a9 9 0 0 1 18-2 9 9 0 0 1 18 2c0 8-6 15-18 23z"></path>
+  </svg>
+</sc-if>
+<sc-if value="{{ isTarget }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="24" r="16"></circle>
+    <circle cx="24" cy="24" r="9"></circle>
+    <circle cx="24" cy="24" r="2"></circle>
+  </svg>
+</sc-if>
+<sc-if value="{{ isChat }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 12h36v20H18l-8 8v-8H6z"></path>
+    <line x1="14" y1="19" x2="34" y2="19"></line>
+    <line x1="14" y1="25" x2="26" y2="25"></line>
+  </svg>
+</sc-if>
+<sc-if value="{{ isCalendar }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="10" width="36" height="30" rx="4"></rect>
+    <line x1="6" y1="19" x2="42" y2="19"></line>
+    <line x1="14" y1="6" x2="14" y2="14"></line>
+    <line x1="34" y1="6" x2="34" y2="14"></line>
+  </svg>
+</sc-if>
+<sc-if value="{{ isPin }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 44S9 29 9 18a15 15 0 0 1 30 0c0 11-15 26-15 26z"></path>
+    <circle cx="24" cy="18" r="5"></circle>
+  </svg>
+</sc-if>
+<sc-if value="{{ isClock }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="24" r="17"></circle>
+    <line x1="24" y1="24" x2="24" y2="13"></line>
+    <line x1="24" y1="24" x2="32" y2="28"></line>
+  </svg>
+</sc-if>
+<sc-if value="{{ isLeaf }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 38C10 20 24 8 40 8c0 16-12 30-30 30z"></path>
+    <line x1="10" y1="38" x2="26" y2="22"></line>
+  </svg>
+</sc-if>
+<sc-if value="{{ isCheck }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="24" r="17"></circle>
+    <path d="M16 24l6 6 12-13"></path>
+  </svg>
+</sc-if>
+</span>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:48,&quot;height&quot;:48}, &quot;type&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;heart&quot;,&quot;options&quot;:[&quot;course&quot;,&quot;peers&quot;,&quot;group&quot;,&quot;briefcase&quot;,&quot;mail&quot;,&quot;lightbulb&quot;,&quot;heart&quot;,&quot;target&quot;,&quot;chat&quot;,&quot;calendar&quot;,&quot;pin&quot;,&quot;clock&quot;,&quot;leaf&quot;,&quot;check&quot;],&quot;tsType&quot;:&quot;string&quot;}, &quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:28,&quot;min&quot;:16,&quot;max&quot;:96,&quot;tsType&quot;:&quot;number&quot;}, &quot;color&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#A64F9D&quot;,&quot;options&quot;:[&quot;#A64F9D&quot;,&quot;#6F3569&quot;,&quot;#5F5F5F&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const type = this.props.type || 'heart';
+    return {
+      px: this.props.size || 28,
+      color: this.props.color || '#A64F9D',
+      isCourse: type === 'course',
+      isPeers: type === 'peers',
+      isGroup: type === 'group',
+      isBriefcase: type === 'briefcase',
+      isMail: type === 'mail',
+      isLightbulb: type === 'lightbulb',
+      isHeart: type === 'heart',
+      isTarget: type === 'target',
+      isChat: type === 'chat',
+      isCalendar: type === 'calendar',
+      isPin: type === 'pin',
+      isClock: type === 'clock',
+      isLeaf: type === 'leaf',
+      isCheck: type === 'check',
+    };
+  }
+}
+
+</script>
+</body>
+</html>
