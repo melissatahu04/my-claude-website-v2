@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<div style="position:fixed; left:0; right:0; bottom:0; z-index:999; display:{{ display }}; background:#FBF5F6; border-top:1px solid #E8DDE3; box-shadow:0 -2px 12px rgba(0,0,0,0.06); font-family:'Poppins',sans-serif;">
+  <div style="max-width:1200px; margin:0 auto; padding:14px 20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px;">
+    <div style="font-size:13px; line-height:1.6; font-weight:300; color:#3A2F35; flex:1 1 260px;">This site uses cookies to work properly and to help us understand how it's used. You can read more in our <a href="privacy.dc.html" style="color:#3A2F35; text-decoration:underline; font-weight:400;" style-hover="color:#A75298;">Privacy Policy</a>.</div>
+    <button onClick="{{ accept }}" style="flex:0 0 auto; background:#A75298; color:#FFFFFF; border:none; padding:10px 24px; border-radius:22px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:500; cursor:pointer;" style-hover="background:#8f4082;">Accept</button>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { visible: false };
+
+  componentDidMount() {
+    if (!localStorage.getItem('mu_cookie_consent')) this.setState({ visible: true });
+  }
+
+  accept = () => {
+    localStorage.setItem('mu_cookie_consent', 'accepted');
+    this.setState({ visible: false });
+  };
+
+  renderVals() {
+    return {
+      display: this.state.visible ? 'block' : 'none',
+      accept: this.accept,
+    };
+  }
+}
+
+</script>
+</body>
+</html>

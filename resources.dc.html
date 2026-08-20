@@ -19,6 +19,7 @@
     a:hover { color:#6F3569; }
   </style>
 </helmet>
+<dc-import name="CookieBanner" hint-size="100%,60px"></dc-import>
 <div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
   <dc-import name="Nav" current="resources" hint-size="100%,66px"></dc-import>
 
@@ -31,43 +32,27 @@
   <section style="max-width:720px; margin:56px auto 0; padding:0 clamp(20px,4vw,32px); display:flex; flex-direction:column; gap:24px;">
     <div style="background:#FFFFFF; border:2px solid #A64F9D; border-radius:20px; padding:clamp(24px,5vw,40px); display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px;">
       <dc-import name="Icon" type="course" size="34" hint-size="34px,34px"></dc-import>
-      <div style="font-size:20px; font-weight:500; color:#2E2E2E;">Noticing the Pattern: A Perimenopause Reflection Journal</div>
+      <h2 style="font-size:20px; font-weight:500; color:#2E2E2E; margin:0;">Noticing the Pattern: A Perimenopause Reflection Journal</h2>
       <div style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7; max-width:460px;">A gentle way to notice whether the scattered things you're feeling are actually connected.</div>
       <a href="assets/peri-reflection-journal.pdf" target="_blank" style="margin-top:8px; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:14px 28px; border-radius:26px; font-size:14.5px; font-weight:500;" style-hover="background:#6F3569;">Get the Free Journal</a>
     </div>
     <div style="background:#FFFFFF; border:2px solid #A64F9D; border-radius:20px; padding:clamp(24px,5vw,40px); display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px;">
       <dc-import name="Icon" type="course" size="34" hint-size="34px,34px"></dc-import>
-      <div style="font-size:20px; font-weight:500; color:#2E2E2E;">Free Menopause Symptom Checklist</div>
-      <div style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7; max-width:460px;">A simple printable to help you notice patterns in your symptoms, and feel prepared for your next doctor's appointment.</div>
-      <button onClick="{{ openNewsletterModal }}" style="margin-top:8px; background:#A64F9D; color:#FFFFFF; border:none; text-decoration:none; padding:14px 28px; border-radius:26px; font-size:14.5px; font-weight:500; cursor:pointer; font-family:'Poppins',sans-serif;" style-hover="background:#6F3569;">Get the Free Checklist</button>
+      <h2 style="font-size:20px; font-weight:500; color:#2E2E2E; margin:0;">Menopause Terms Explained</h2>
+      <div style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7; max-width:460px;">An easy-to-understand glossary of the terms you'll hear on this journey, explained clearly and without the jargon.</div>
+      <button disabled="{{ true }}" style="margin-top:8px; background:#E8DDE3; color:#8A8A8A; border:none; text-decoration:none; padding:14px 28px; border-radius:26px; font-size:14.5px; font-weight:500; cursor:not-allowed; font-family:'Poppins',sans-serif;">Coming Soon</button>
     </div>
   </section>
 
-  <section style="max-width:900px; margin:72px auto 0; padding:0 clamp(20px,4vw,32px); text-align:center;">
+  <section style="max-width:900px; margin:72px auto 88px; padding:0 clamp(20px,4vw,32px); text-align:center;">
     <h2 style="font-size:26px; font-weight:400; color:#2E2E2E; margin:0 0 12px;">More on the way</h2>
-    <p style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7; margin:0 0 32px;">We're building out a small library of guides. Join the newsletter and they'll land straight in your inbox as they're ready.</p>
-  </section>
-  <section style="max-width:900px; margin:0 auto 88px; padding:0 clamp(20px,4vw,32px); display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px;">
-    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:18px; padding:28px; display:flex; gap:16px; align-items:flex-start;">
-      <dc-import name="Icon" type="chat" size="26" hint-size="26px,26px"></dc-import>
-      <div>
-        <div style="font-size:15.5px; font-weight:500; color:#2E2E2E;">Talking to Your Doctor</div>
-        <div style="font-size:13.5px; font-weight:300; color:#5F5F5F; margin-top:4px;">Coming soon</div>
-      </div>
-    </div>
-    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:18px; padding:28px; display:flex; gap:16px; align-items:flex-start;">
-      <dc-import name="Icon" type="briefcase" size="26" hint-size="26px,26px"></dc-import>
-      <div>
-        <div style="font-size:15.5px; font-weight:500; color:#2E2E2E;">Talking to Your Manager</div>
-        <div style="font-size:13.5px; font-weight:300; color:#5F5F5F; margin-top:4px;">Coming soon</div>
-      </div>
-    </div>
+    <p style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7; margin:0;">We're building out a small library of guides. Join the newsletter and they'll land straight in your inbox as they're ready.</p>
   </section>
 
   <section style="background:#A64F9D; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px);">
     <div style="max-width:720px; margin:0 auto; text-align:center;">
       <h2 style="font-size:clamp(24px,4vw,32px); font-weight:400; color:#FFFFFF; margin:0 0 16px;">Want more, straight to your inbox?</h2>
-      <p style="font-size:17px; font-weight:300; color:#FCF6F7; line-height:1.7; margin:0 0 32px;">New resources and gentle guidance, once a month.</p>
+      <p style="font-size:17px; font-weight:300; color:#FCF6F7; line-height:1.7; margin:0 0 32px;">New resources and gentle guidance, plus occasional updates when there's something new.</p>
       <button onClick="{{ openNewsletterModal }}" style="background:#FFFFFF; color:#A64F9D; border:none; text-decoration:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500; cursor:pointer; font-family:'Poppins',sans-serif;" style-hover="background:#FCF6F7;">Join the Newsletter</button>
     </div>
   </section>

@@ -19,6 +19,7 @@
     a:hover { color:#6F3569; }
   </style>
 </helmet>
+<dc-import name="CookieBanner" hint-size="100%,60px"></dc-import>
 <div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
   <dc-import name="Nav" current="events" hint-size="100%,66px"></dc-import>
 
@@ -29,13 +30,13 @@
   </section>
 
   <section style="max-width:1100px; margin:64px auto; padding:0 clamp(20px,4vw,32px);">
-    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; padding:clamp(24px,5vw,36px); display:flex; flex-direction:column; gap:16px; max-width:520px;">
+    <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; padding:clamp(24px,5vw,36px); display:flex; flex-direction:column; gap:16px; max-width:520px; margin:0 auto;">
       <div style="display:flex; align-items:center; gap:14px;">
         <dc-import name="Icon" type="group" size="30" hint-size="30px,30px"></dc-import>
         <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Menopause Community Workshops</div>
       </div>
       <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Live, in-person sessions at local venues across South East Queensland, kept affordable and accessible to all.</div>
-      <a href="workshops.dc.html" style="align-self:flex-start; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:12px 24px; border-radius:24px; font-size:14px; font-weight:500;" style-hover="background:#6F3569;">Get Notified</a>
+      <a href="mailto:hello@menopauseunderstood.com.au?subject=Workshop%20Waitlist&body=Hi%2C%20I%27d%20love%20to%20join%20the%20waitlist%20for%20a%20workshop!%0A%0AMy%20suburb%3A%20%0AInterested%20in%3A%20Community%20workshop%20/%20Workplace%20workshop" style="align-self:center; text-decoration:none; background:#A64F9D; color:#FFFFFF; border:none; font-weight:500; font-size:14.5px; padding:10px 20px; border-radius:22px; cursor:pointer; font-family:'Poppins',sans-serif; display:inline-block;" style-hover="background:#6F3569;">Join the Waitlist</a>
     </div>
   </section>
 
@@ -51,7 +52,6 @@
         <div style="display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:300; color:#5F5F5F;"><span style="width:10px; height:10px; border-radius:50%; background:#A64F9D; display:inline-block;"></span>Today</div>
       </div>
     </div>
-    <p style="max-width:700px; margin:0 0 20px; font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.7;">Mauve marks a community workshop, and today's date is highlighted in purple. See the card above for full details on how to join.</p>
     <div style="background:#FFFFFF; border:1px solid #E8DDE3; border-radius:20px; overflow-x:auto;">
       <div style="min-width:560px;">
         <div style="display:grid; grid-template-columns:repeat(7,1fr); background:#FCF6F7; border-bottom:1px solid #E8DDE3;">
@@ -75,7 +75,6 @@
         </sc-for>
       </div>
     </div>
-    <div style="text-align:center; font-size:13px; font-weight:300; color:#5F5F5F; font-style:italic; margin-top:16px;">Example view. Real sessions will appear here once dates are confirmed.</div>
   </section>
 
   <section style="background:#FFFFFF; border-top:1px solid #E8DDE3; border-bottom:1px solid #E8DDE3; padding:64px 32px; text-align:center;">
@@ -93,11 +92,7 @@ class Component extends DCLogic {
     return { year: now.getFullYear(), month: now.getMonth() };
   })();
 
-  // Illustrative example events, keyed by "YYYY-M-D"
-  sampleEvents = {
-    '2026-7-15': [{ title: 'Workshop: Sleep & Menopause', bg: '#C97FB9' }],
-    '2026-7-29': [{ title: 'Workshop: Mood & Midlife', bg: '#C97FB9' }],
-  };
+  sampleEvents = {};
 
   goPrevMonth = () => {
     this.setState(s => {

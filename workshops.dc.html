@@ -19,6 +19,7 @@
     a:hover { color:#6F3569; }
   </style>
 </helmet>
+<dc-import name="CookieBanner" hint-size="100%,60px"></dc-import>
 <div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
   <dc-import name="Nav" current="workshops" hint-size="100%,66px"></dc-import>
 
@@ -51,25 +52,18 @@
       <dc-import name="Icon" type="pin" size="32" hint-size="32px,32px"></dc-import>
       <h2 style="font-size:22px; font-weight:500; color:#2E2E2E; margin:16px 0 10px;">Want a workshop at your local venue?</h2>
       <p style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.7; margin:0 0 24px;">If you're part of a library, community centre, doctor's clinic or local group in South East Queensland and would like to host a session, we'd love to hear from you.</p>
-      <a href="mailto:hello@menopauseunderstood.com.au" style="background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:14px 28px; border-radius:26px; font-size:14.5px; font-weight:500;" style-hover="background:#6F3569;">Request a Workshop</a>
+      <a href="mailto:hello@menopauseunderstood.com.au?subject=Host%20a%20Workshop&body=Hi%2C%20we%27d%20love%20to%20host%20a%20Menopause%20Understood%20workshop%20at%20our%20venue.%0A%0AOrganisation%20name%3A%20%0AType%20of%20venue%20%28library%20/%20community%20centre%20/%20doctor%27s%20clinic%20/%20local%20group%29%3A%20%0ASuburb%3A%20%0AApproximate%20group%20size%3A%20%0APreferred%20timing%3A%20" style="background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:14px 28px; border-radius:26px; font-size:14.5px; font-weight:500;" style-hover="background:#6F3569;">Request a Workshop</a>
     </div>
   </section>
 
-  <section style="background:#FFFFFF; border-top:1px solid #E8DDE3; border-bottom:1px solid #E8DDE3; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px); margin-top:80px;">
+  <section style="background:#FCF6F7; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px); margin-top:40px;">
     <div style="max-width:720px; margin:0 auto; text-align:center;">
       <h2 style="font-size:clamp(22px,3.5vw,28px); font-weight:400; color:#2E2E2E; margin:0 0 16px;">No dates on the calendar yet</h2>
-      <p style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.8; margin:0 0 24px;">We're planning our very first menopause community workshops now, across South East Queensland. Join the waitlist and we'll let you know as soon as a date and venue are confirmed.</p>
+      <p style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.8; margin:0 0 24px;">We're planning our very first menopause community workshops in the coming months across South East Queensland. Join the waitlist and we'll let you know as soon as a date and venue are confirmed.</p>
       <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-        <button onClick="{{ openNewsletterModal }}" style="text-decoration:none; background:#A64F9D; color:#FFFFFF; border:none; font-weight:500; font-size:14.5px; padding:10px 20px; border-radius:22px; cursor:pointer; font-family:'Poppins',sans-serif;" style-hover="background:#6F3569;">Join the Waitlist</button>
-        <a href="events.dc.html" style="text-decoration:none; color:#A64F9D; font-weight:500; font-size:14.5px; border:1px solid #A64F9D; padding:10px 20px; border-radius:22px;" style-hover="background:#A64F9D; color:#FFFFFF;">View Events Calendar</a>
+        <a href="mailto:hello@menopauseunderstood.com.au?subject=Workshop%20Waitlist&body=Hi%2C%20I%27d%20love%20to%20join%20the%20waitlist%20for%20a%20workshop!%0A%0AMy%20suburb%3A%20%0AInterested%20in%3A%20Community%20workshop%20/%20Workplace%20workshop" style="text-decoration:none; background:#A64F9D; color:#FFFFFF; border:none; font-weight:500; font-size:14.5px; padding:10px 20px; border-radius:22px; cursor:pointer; font-family:'Poppins',sans-serif; display:inline-block;" style-hover="background:#6F3569;">Join the Waitlist</a>
       </div>
     </div>
-  </section>
-
-  <section style="max-width:720px; margin:0 auto; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px); text-align:center;">
-    <h2 style="font-size:clamp(24px,4vw,30px); font-weight:400; color:#2E2E2E; margin:0 0 16px;">Never miss a workshop</h2>
-    <p style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.7; margin:0 0 28px;">Join our newsletter to hear about new dates as soon as they're announced.</p>
-    <button onClick="{{ openNewsletterModal }}" style="background:#A64F9D; color:#FFFFFF; border:none; text-decoration:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500; cursor:pointer; font-family:'Poppins',sans-serif;" style-hover="background:#6F3569;">Join the Newsletter</button>
   </section>
 
   <dc-import name="Footer" hint-size="100%,320px"></dc-import>
