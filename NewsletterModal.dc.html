@@ -90,7 +90,7 @@ const FORM_HTML = `<div class="sib-form" style="text-align: center; background-c
           </div>
         </div>
         <div style="padding: 8px 0;">
-          <div class="g-recaptcha" data-sitekey="6Ld7ko0tAAAAAIvRXrElFp-WG5IwaJvP0P6tf45g" data-callback="invisibleCaptchaCallback" data-size="invisible" onclick="executeCaptcha"></div>
+          <div class="g-recaptcha" data-sitekey="6Ld7ko0tAAAAAIvRXrElFp-WG5IwaJvP0P6tf45g"></div>
         </div>
         <div style="padding: 8px 0;">
           <div class="sib-form-block" style="text-align: left">
@@ -164,6 +164,25 @@ class Component extends DCLogic {
     const recaptchaScript = document.createElement('script');
     recaptchaScript.src = 'https://www.google.com/recaptcha/api.js?hl=en';
     document.body.appendChild(recaptchaScript);
+
+    // Google's badge is injected async and can end up nested inside a
+    // transformed/clipped ancestor, causing it to be cut off when the
+    // modal overlay is open. Re-anchor it directly to <body> with an
+    // explicit z-index above the modal (z-index:1000) whenever it appears.
+    const fixBadge = (badge) => {
+      if (badge.parentElement !== document.body) document.body.appendChild(badge);
+      badge.style.setProperty('z-index', '2147483647', 'important');
+      badge.style.setProperty('position', 'fixed', 'important');
+      badge.style.setProperty('right', '0', 'important'); // keep "protected by reCAPTCHA" label expanded, not just on hover
+    };
+    const existing = document.querySelector('.grecaptcha-badge');
+    if (existing) fixBadge(existing);
+    const observer = new MutationObserver(() => {
+      const badge = document.querySelector('.grecaptcha-badge');
+      if (badge) fixBadge(badge);
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    window.__recaptchaBadgeObserver = observer;
   }
 
   componentDidMount() {
