@@ -9,6 +9,8 @@
 <x-dc>
 <helmet>
   <title>Menopause Understood: Support for Peri, Meno & Post-Menopause</title>
+  <meta name="description" content="Menopause Understood offers self-paced online courses, in-person community workshops and workplace training to help you understand perimenopause, menopause and postmenopause.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -34,14 +36,7 @@
         <dc-import name="Icon" type="check" size="30" hint-size="30px,30px"></dc-import>
         <div>
           <div style="font-size:16px; font-weight:500; color:#2E2E2E; margin-bottom:4px;">Evidence-based education</div>
-          <div style="font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.6;">Grounded in real research, written in plain English.</div>
-        </div>
-      </div>
-      <div style="display:flex; gap:18px; align-items:flex-start;">
-        <dc-import name="Icon" type="peers" size="30" hint-size="30px,30px"></dc-import>
-        <div>
-          <div style="font-size:16px; font-weight:500; color:#2E2E2E; margin-bottom:4px;">A community that listens</div>
-          <div style="font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.6;">Small peer groups where you're truly heard.</div>
+          <div style="font-size:14px; font-weight:300; color:#5F5F5F; line-height:1.6;">Grounded in real research, written in language that actually makes sense.</div>
         </div>
       </div>
       <div style="display:flex; gap:18px; align-items:flex-start;">
@@ -63,29 +58,24 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:28px;">
         <a href="courses.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:32px clamp(24px,4vw,32px); display:flex; flex-direction:column; gap:18px; position:relative;" style-hover="border-color:#A64F9D;">
           <dc-import name="Icon" type="course" size="34" hint-size="34px,34px"></dc-import>
-          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Online Courses</div>
+          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Short Online Courses</div>
           <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Short, self-paced courses on symptoms, hormones and what actually helps.</div>
-        </a>
-        <a href="peer-groups.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
-          <dc-import name="Icon" type="peers" size="34" hint-size="34px,34px"></dc-import>
-          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">In This Together: Peer Groups</div>
-          <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Small, guided groups of women sharing this stage of life, over a 9-week term.</div>
         </a>
         <a href="workshops.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
           <dc-import name="Icon" type="group" size="34" hint-size="34px,34px"></dc-import>
-          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Community Workshops</div>
-          <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Live sessions on topics that matter, with room for real questions.</div>
+          <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Menopause Community Workshops</div>
+          <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Live sessions across South East Queensland, with room for real questions.</div>
         </a>
         <a href="workplace.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
           <dc-import name="Icon" type="briefcase" size="34" hint-size="34px,34px"></dc-import>
           <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Workplace Workshops</div>
           <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Helping employers build genuinely supportive workplaces.</div>
         </a>
-        <a href="newsletter.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
+        <button onClick="{{ openNewsletterModal }}" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px; text-align:left; cursor:pointer; font-family:'Poppins',sans-serif;" style-hover="border-color:#A64F9D;">
           <dc-import name="Icon" type="mail" size="34" hint-size="34px,34px"></dc-import>
           <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Email Newsletter</div>
           <div style="font-size:14.5px; font-weight:300; color:#5F5F5F; line-height:1.7;">Gentle guidance, honest stories and research translated into plain language, monthly.</div>
-        </a>
+        </button>
         <a href="resources.dc.html" style="text-decoration:none; background:#FCF6F7; border:1px solid #E8DDE3; border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; gap:18px;" style-hover="border-color:#A64F9D;">
           <dc-import name="Icon" type="lightbulb" size="34" hint-size="34px,34px"></dc-import>
           <div style="font-size:19px; font-weight:500; color:#2E2E2E;">Free Resources</div>
@@ -106,7 +96,7 @@
       <h2 style="font-size:clamp(24px,4vw,32px); font-weight:400; color:#FFFFFF; margin:0 0 16px;">Start with something free</h2>
       <p style="font-size:17px; font-weight:300; color:#FCF6F7; line-height:1.7; margin:0 0 32px;">Join our newsletter for a free symptom checklist, gentle monthly guidance, and recent research translated into plain language.</p>
       <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="newsletter.dc.html" style="background:#FFFFFF; color:#A64F9D; text-decoration:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500;" style-hover="background:#FCF6F7;">Join the Newsletter</a>
+        <button onClick="{{ openNewsletterModal }}" style="background:#FFFFFF; color:#A64F9D; border:none; text-decoration:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500; cursor:pointer; font-family:'Poppins',sans-serif;" style-hover="background:#FCF6F7;">Join the Newsletter</button>
         <a href="resources.dc.html" style="background:transparent; color:#FFFFFF; text-decoration:none; padding:15px 30px; border-radius:28px; font-size:15px; font-weight:500; border:1px solid #FFFFFF;">Browse Free Resources</a>
       </div>
     </div>
@@ -116,5 +106,13 @@
 </div>
 
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  openNewsletterModal = () => window.__openNewsletterModal && window.__openNewsletterModal();
+  renderVals() {
+    return { openNewsletterModal: this.openNewsletterModal };
+  }
+}
+</script>
 </body>
 </html>

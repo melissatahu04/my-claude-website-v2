@@ -16,9 +16,8 @@
     <div>
       <div style="color:#2E2E2E; font-size:14px; font-weight:500; margin-bottom:14px;">Learn</div>
       <div style="display:flex; flex-direction:column; gap:10px;">
-        <a href="courses.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Online Courses</a>
-        <a href="peer-groups.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">In This Together (Peer Groups)</a>
-        <a href="workshops.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Community Workshops</a>
+        <a href="courses.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Short Online Courses</a>
+        <a href="workshops.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Menopause Community Workshops</a>
         <a href="events.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Events Calendar</a>
         <a href="resources.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Free Resources</a>
       </div>
@@ -28,25 +27,40 @@
       <div style="display:flex; flex-direction:column; gap:10px;">
         <a href="about.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">About Us</a>
         <a href="workplace.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Workplace Workshops</a>
-        <a href="contact.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Contact</a>
+        <a href="mailto:hello@menopauseunderstood.com.au" style="color:#5F5F5F; text-decoration:none; font-size:14px; font-weight:300;">Contact</a>
       </div>
     </div>
     <div>
       <div style="color:#2E2E2E; font-size:14px; font-weight:500; margin-bottom:14px;">Stay in touch</div>
       <p style="color:#5F5F5F; font-size:14px; font-weight:300; line-height:1.7; margin:0 0 14px;">Gentle guidance, honest stories and research translated into plain language, monthly.</p>
-      <a href="newsletter.dc.html" style="display:inline-block; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:10px 20px; border-radius:22px; font-size:14px; font-weight:500;" style-hover="background:#6F3569;">Subscribe</a>
+      <button onClick="{{ openNewsletterModal }}" style="display:inline-block; background:#A64F9D; color:#FFFFFF; border:none; text-decoration:none; padding:10px 20px; border-radius:22px; font-size:14px; font-weight:500; font-family:'Poppins',sans-serif; cursor:pointer;" style-hover="background:#6F3569;">Subscribe</button>
+      <div style="display:flex; gap:14px; margin-top:18px;">
+        <a href="https://www.instagram.com/menopauseunderstood/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;" style-hover="opacity:0.75;">
+          <dc-import name="Icon" type="instagram" size="24" color="#A64F9D" hint-size="24px,24px"></dc-import>
+        </a>
+        <a href="https://www.facebook.com/menopauseunderstood/" target="_blank" rel="noopener" aria-label="Facebook" style="display:inline-flex;" style-hover="opacity:0.75;">
+          <dc-import name="Icon" type="facebook" size="24" color="#A64F9D" hint-size="24px,24px"></dc-import>
+        </a>
+      </div>
     </div>
   </div>
-  <div style="max-width:1200px; margin:0 auto; padding:20px clamp(20px,4vw,32px); border-top:1px solid #E8DDE3; color:#5F5F5F; font-size:13px; font-weight:300;">
-    © {{ currentYear }} Menopause Understood. All rights reserved.
+  <div style="max-width:1200px; margin:0 auto; padding:20px clamp(20px,4vw,32px); border-top:1px solid #E8DDE3; color:#5F5F5F; font-size:13px; font-weight:300; display:flex; flex-direction:column; gap:8px;">
+    <div>© {{ currentYear }} Menopause Understood. All rights reserved. ABN 41 823 903 951.</div>
+    <div style="font-size:12px; line-height:1.6; max-width:900px;">This information is general in nature and educational, reflects current evidence at the time of writing, and is not a substitute for professional medical advice. Consult a qualified health professional about your own circumstances.</div>
+    <div style="display:flex; gap:18px;">
+      <a href="privacy.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:12px; font-weight:300;" style-hover="color:#A64F9D;">Privacy Policy</a>
+      <a href="terms.dc.html" style="color:#5F5F5F; text-decoration:none; font-size:12px; font-weight:300;" style-hover="color:#A64F9D;">Terms & Conditions</a>
+    </div>
   </div>
 </footer>
+<dc-import name="NewsletterModal" hint-size="0px,0px"></dc-import>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:320}}">
 class Component extends DCLogic {
+  openNewsletterModal = () => window.__openNewsletterModal && window.__openNewsletterModal();
   renderVals() {
-    return { currentYear: new Date().getFullYear() };
+    return { currentYear: new Date().getFullYear(), openNewsletterModal: this.openNewsletterModal };
   }
 }
 

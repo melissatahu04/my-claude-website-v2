@@ -23,7 +23,7 @@
           <a href="{{ item.href }}" style="{{ item.style }}">{{ item.label }}</a>
         </sc-for>
       </nav>
-      <a href="contact.dc.html" style="background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:10px 22px; border-radius:24px; font-family:'Poppins',sans-serif; font-weight:500; font-size:15px; white-space:nowrap; flex-shrink:0;" style-hover="background:#6F3569;">Contact Us</a>
+      <a href="mailto:hello@menopauseunderstood.com.au" style="background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:10px 22px; border-radius:24px; font-family:'Poppins',sans-serif; font-weight:500; font-size:15px; white-space:nowrap; flex-shrink:0;" style-hover="background:#6F3569;">Contact Us</a>
     </sc-if>
 
     <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
@@ -40,7 +40,7 @@
       <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="8">
         <a href="{{ item.href }}" style="{{ item.mobileStyle }}" onClick="{{ closeMenu }}">{{ item.label }}</a>
       </sc-for>
-      <a href="contact.dc.html" onClick="{{ closeMenu }}" style="margin-top:14px; text-align:center; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:12px 22px; border-radius:24px; font-weight:500; font-size:15px;" style-hover="background:#6F3569;">Contact Us</a>
+      <a href="mailto:hello@menopauseunderstood.com.au" onClick="{{ closeMenu }}" style="margin-top:14px; text-align:center; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:12px 22px; border-radius:24px; font-weight:500; font-size:15px;" style-hover="background:#6F3569;">Contact Us</a>
     </nav>
   </sc-if>
 </header>
@@ -82,7 +82,6 @@ class Component extends DCLogic {
       { key: 'home', href: 'index.dc.html', label: 'Home' },
       { key: 'about', href: 'about.dc.html', label: 'About' },
       { key: 'courses', href: 'courses.dc.html', label: 'Courses' },
-      { key: 'peer-groups', href: 'peer-groups.dc.html', label: 'Peer Groups' },
       { key: 'workshops', href: 'workshops.dc.html', label: 'Workshops' },
       { key: 'events', href: 'events.dc.html', label: 'Events' },
       { key: 'workplace', href: 'workplace.dc.html', label: 'For Employers' },
