@@ -110,7 +110,7 @@ class Component extends DCLogic {
   renderVals() {
     const { year, month } = this.state;
     const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    const firstWeekday = new Date(Date.UTC(year, month, 1)).getUTCDay();
+    const firstWeekday = (new Date(Date.UTC(year, month, 1)).getUTCDay() + 6) % 7;
     const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
     const today = new Date();
     const isCurrentMonth = today.getFullYear() === year && today.getMonth() === month;
@@ -134,7 +134,7 @@ class Component extends DCLogic {
     const weeks = [];
     for (let i = 0; i < cells.length; i += 7) weeks.push(cells.slice(i, i + 7));
     return {
-      weekdayLabels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      weekdayLabels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       weeks,
       monthLabel: monthNames[month],
       year,
