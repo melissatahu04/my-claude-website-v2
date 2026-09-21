@@ -1,8 +1,18 @@
 {
   "redirects": [
-    { "source": "/course-1.dc.html", "destination": "/course-1", "permanent": true }
+    { "source": "/course-1.dc.html", "destination": "/course-1", "permanent": true },
+    { "source": "/courses.dc.html", "destination": "/courses", "permanent": true },
+    { "source": "/about.dc.html", "destination": "/about", "permanent": true },
+    { "source": "/workshops.dc.html", "destination": "/workshops", "permanent": true },
+    { "source": "/workplace.dc.html", "destination": "/workplace", "permanent": true },
+    { "source": "/resources.dc.html", "destination": "/resources", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/course-1", "destination": "/course-1.dc.html" }
+    { "source": "/course-1", "destination": "/course-1.dc.html" },
+    { "source": "/courses", "destination": "/courses.dc.html" },
+    { "source": "/about", "destination": "/about.dc.html" },
+    { "source": "/workshops", "destination": "/workshops.dc.html" },
+    { "source": "/workplace", "destination": "/workplace.dc.html" },
+    { "source": "/resources", "destination": "/resources.dc.html" }
   ]
 }
