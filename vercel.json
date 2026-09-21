@@ -1,0 +1,6 @@
+json
+{
+  "rewrites": [
+    { "source": "/course-1", "destination": "/course-1.dc.html" }
+  ]
+}
