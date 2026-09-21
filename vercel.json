@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/course-1.dc.html", "destination": "/course-1", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/course-1", "destination": "/course-1.dc.html" }
   ]
