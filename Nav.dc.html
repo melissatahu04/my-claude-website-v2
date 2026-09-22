@@ -62,6 +62,27 @@ class Component extends DCLogic {
   componentDidMount() {
     this.setState({ isMobile: this.computeIsMobile() });
     window.addEventListener('resize', this.handleResize);
+    // In the editor preview there's no clean-URL rewrite, so map /page -> page.dc.html on click
+    const h = location.hostname;
+    const isLive = /menopauseunderstood\.com\.au$|vercel\.app$/.test(h);
+    if (!isLive && !window.__muPreviewLinks) {
+      window.__muPreviewLinks = true;
+      document.addEventListener('click', (e) => {
+        const a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (!href || !href.startsWith('/') || href.startsWith('//')) return;
+        e.preventDefault();
+        const [path, hash] = href.split('#');
+        let dest;
+        if (path === '/' || path === '') dest = 'index.dc.html';
+        else if (path.startsWith('/assets/')) dest = path.slice(1);
+        else dest = path.slice(1).replace(/\/$/, '') + '.dc.html';
+        if (hash) dest += '#' + hash;
+        if (a.target === '_blank') window.open(dest, '_blank');
+        else location.href = dest;
+      }, true);
+    }
   }
 
   componentWillUnmount() {
