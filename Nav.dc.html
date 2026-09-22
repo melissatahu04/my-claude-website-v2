@@ -13,7 +13,7 @@
 </helmet>
 <header style="background:#FCF6F7; border-bottom:1px solid #E8DDE3; position:sticky; top:0; z-index:50;">
   <div style="max-width:1200px; margin:0 auto; padding:14px clamp(20px,4vw,32px); display:flex; align-items:center; justify-content:space-between; gap:20px;">
-    <a href="index.dc.html" style="display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0;">
+    <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0;">
       <img src="assets/logo.png" alt="Menopause Understood" style="height:56px; width:auto; display:block;" />
     </a>
 
@@ -79,13 +79,13 @@ class Component extends DCLogic {
     const mobileActive = 'text-decoration:none; font-size:16px; font-weight:500; color:#A64F9D; padding:12px 0; border-bottom:1px solid #E8DDE3;';
 
     const items = [
-      { key: 'home', href: 'index.dc.html', label: 'Home' },
-      { key: 'about', href: 'about.dc.html', label: 'About' },
-      { key: 'courses', href: 'courses.dc.html', label: 'Courses' },
-      { key: 'workshops', href: 'workshops.dc.html', label: 'Workshops' },
-      { key: 'events', href: 'events.dc.html', label: 'Events' },
-      { key: 'workplace', href: 'workplace.dc.html', label: 'For Employers' },
-      { key: 'resources', href: 'resources.dc.html', label: 'Resources' },
+      { key: 'home', href: '/', label: 'Home' },
+      { key: 'about', href: '/about', label: 'About' },
+      { key: 'courses', href: '/courses', label: 'Courses' },
+      { key: 'workshops', href: '/workshops', label: 'Workshops' },
+      { key: 'events', href: '/events', label: 'Events' },
+      { key: 'workplace', href: '/workplace', label: 'For Employers' },
+      { key: 'resources', href: '/resources', label: 'Resources' },
     ];
 
     const navItems = items.map(it => ({

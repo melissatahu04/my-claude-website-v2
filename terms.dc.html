@@ -7,10 +7,9 @@
 </head>
 <body>
 <x-dc>
-
 <helmet>
   <title>Terms and Conditions: Menopause Understood</title>
-  <meta name="description" content="Read the Menopause Understood Terms and Conditions for courses, workshops and workplace packages.">
+  <meta name="description" content="Read the Menopause Understood website Terms and Conditions.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,87 +23,16 @@
 <div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
   <dc-import name="Nav" hint-size="100%,66px"></dc-import>
 
-  <section style="max-width:760px; margin:0 auto; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px) 8px;">
+  <section style="max-width:640px; margin:0 auto; padding:clamp(64px,10vw,100px) clamp(20px,4vw,32px) clamp(80px,10vw,120px); text-align:center;">
     <div style="color:#A64F9D; font-size:14px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;">Legal</div>
-    <h1 style="font-size:clamp(28px,4.5vw,40px); line-height:1.2; font-weight:400; color:#2E2E2E; margin:0 0 12px;">Terms and Conditions</h1>
-    <p style="font-size:14px; font-weight:300; color:#5F5F5F; margin:0 0 40px;">Draft. Menopause Understood (ABN 41 823 903 951).</p>
-  </section>
-
-  <section style="max-width:760px; margin:0 auto; padding:0 clamp(20px,4vw,32px) clamp(56px,8vw,96px); display:flex; flex-direction:column; gap:36px;">
-    <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="6">
-      <div>
-        <h2 style="font-size:19px; font-weight:500; color:#2E2E2E; margin:0 0 14px;">{{ sec.heading }}</h2>
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <sc-for list="{{ sec.paragraphs }}" as="p" hint-placeholder-count="2">
-            <p style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.8; margin:0;">{{ p }}</p>
-          </sc-for>
-        </div>
-      </div>
-    </sc-for>
+    <h1 style="font-size:clamp(28px,4.5vw,40px); line-height:1.2; font-weight:400; color:#2E2E2E; margin:0 0 18px;">Website Terms and Conditions</h1>
+    <p style="font-size:16px; line-height:1.8; font-weight:300; color:#5F5F5F; margin:0 0 32px;">Please view the Menopause Understood Website Terms and Conditions.</p>
+    <a href="https://raw.githubusercontent.com/melissatahu04/my-claude-website-v2/main/Menopause%20Understood_Website%20Terms%20and%20Conditions.pdf" target="_blank" rel="noopener" style="display:inline-block; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:14px 32px; border-radius:26px; font-size:15px; font-weight:500;" style-hover="background:#6F3569;">Open Terms &amp; Conditions</a>
   </section>
 
   <dc-import name="Footer" hint-size="100%,320px"></dc-import>
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  sections = [
-    { heading: '1. About These Terms', paragraphs: [
-      'These Terms and Conditions apply to all purchases and bookings made through menopauseunderstood.com.au ("the Website"), including online courses, Menopause Community Workshops, and workplace packages, offered by Menopause Understood (ABN 41 823 903 951), trading as Menopause Understood ("we", "us", "our"). By making a purchase or booking, you agree to be bound by these Terms.',
-    ]},
-    { heading: '2. Our Content Is Educational, Not Medical Advice', paragraphs: [
-      'All courses, workshops and resources are provided for general educational and informational purposes only. They do not constitute medical advice, diagnosis or treatment, and are not a substitute for consultation with your doctor or a qualified health professional. You should seek independent medical advice for decisions about your own health.',
-    ]},
-    { heading: '3. Payment Terms', paragraphs: [
-      'All prices are shown in Australian Dollars (AUD).',
-      'Course payments are processed securely through Payhip, our course platform, using Stripe as the payment processor. We do not collect or store your full card details.',
-      'Course, bundle, and workshop payments are charged in full at the time of purchase or booking.',
-      'Workplace packages may be invoiced under separate agreed payment terms, which take precedence over this section for that engagement.',
-      'Access to a course or a place in a session/term is confirmed once payment has been successfully processed.',
-    ]},
-    { heading: '4. Refunds and Cancellations', paragraphs: [
-      'Because our courses provide immediate digital access, we do not offer refunds for change of mind once a course has been accessed or once a workshop has commenced.',
-      'This does not affect your rights under the Australian Consumer Law (ACL). You may be entitled to a refund, replacement or other remedy where a course or service: is not of acceptable quality; is not fit for the purpose we disclosed; does not match the description provided; or (for services) is not provided with due care and skill, or is not delivered within a reasonable time.',
-      'Nothing in these Terms excludes, restricts or modifies your rights under the ACL, which cannot be excluded by agreement. To request a remedy, contact us at hello@menopauseunderstood.com.au.',
-    ]},
-    { heading: '5. Content Ownership and Intellectual Property', paragraphs: [
-      'All course materials, videos, audio, written content, worksheets, branding and related resources remain the intellectual property of Menopause Understood or its licensors, and are protected by copyright law.',
-      'When you purchase a course or program, you are granted a personal, non-transferable, non-exclusive licence to access and use that content for your own personal, non-commercial use only.',
-      'You may not copy, reproduce, distribute, resell, publicly share, or create derivative works from any content without our prior written consent. Unauthorised use may result in your access being revoked without refund, and may constitute a breach of copyright law.',
-    ]},
-    { heading: '6. Liability', paragraphs: [
-      'Our content reflects general information and research; individual circumstances vary, and we do not guarantee specific outcomes or results from using our courses, resources or programs.',
-      'To the maximum extent permitted by law, Menopause Understood excludes all liability for any loss or damage arising from your use of our content or services, except for liability that cannot be excluded under the ACL. Where liability cannot be excluded, it is, at our option, limited to resupplying the relevant service or refunding the amount you paid for it.',
-      'We are not responsible for issues arising from circumstances outside our reasonable control, including outages or failures of third-party platforms we rely on (such as Payhip, our course delivery platform, Stripe, our payment processor, or our video hosting provider).',
-    ]},
-    { heading: '7. Workplace Packages', paragraphs: [
-      'Workplace packages may be subject to a separate written agreement or invoice covering scope, scheduling and payment instalments. Where there is a conflict between that agreement and these Terms, the specific written agreement applies for that engagement.',
-    ]},
-    { heading: '8. Privacy', paragraphs: [
-      'Information about how we collect, use and store your personal information is set out in our Privacy Policy.',
-    ]},
-    { heading: '9. Dispute Resolution', paragraphs: [
-      'If you have a concern or complaint, please contact us first at hello@menopauseunderstood.com.au so we can try to resolve it directly. We aim to respond within a reasonable timeframe.',
-      'If a concern remains unresolved after 14 days, either party may refer the matter to an appropriate dispute resolution body, such as the Queensland Civil and Administrative Tribunal (QCAT) or a recognised mediation service, before pursuing formal legal action. This does not limit your right to contact the ACCC or Queensland Office of Fair Trading about your consumer rights at any time.',
-    ]},
-    { heading: '10. Governing Law', paragraphs: [
-      'These Terms are governed by the laws of Queensland, Australia. Both parties submit to the non-exclusive jurisdiction of the courts of Queensland.',
-    ]},
-    { heading: '11. Changes to These Terms', paragraphs: [
-      'We may update these Terms from time to time. Any changes apply to purchases made after the updated Terms are published on the Website. Your continued use of the Website after changes are published constitutes acceptance of the updated Terms.',
-    ]},
-    { heading: '12. Contact Us', paragraphs: [
-      'Menopause Understood trading as Menopause Understood',
-      'ABN: 41 823 903 951',
-      'Email: hello@menopauseunderstood.com.au',
-    ]},
-  ];
-  renderVals() {
-    return { sections: this.sections };
-  }
-}
-
-</script>
 </body>
 </html>

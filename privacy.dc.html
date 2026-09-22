@@ -7,10 +7,9 @@
 </head>
 <body>
 <x-dc>
-
 <helmet>
   <title>Privacy Policy: Menopause Understood</title>
-  <meta name="description" content="Read the Menopause Understood Privacy Policy to learn how we collect, use and protect your personal information.">
+  <meta name="description" content="Read the Menopause Understood Privacy Policy.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,100 +23,16 @@
 <div style="background:#FCF6F7; font-family:'Poppins',sans-serif; min-height:100vh;">
   <dc-import name="Nav" hint-size="100%,66px"></dc-import>
 
-  <section style="max-width:760px; margin:0 auto; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px) 8px;">
+  <section style="max-width:640px; margin:0 auto; padding:clamp(64px,10vw,100px) clamp(20px,4vw,32px) clamp(80px,10vw,120px); text-align:center;">
     <div style="color:#A64F9D; font-size:14px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;">Legal</div>
-    <h1 style="font-size:clamp(28px,4.5vw,40px); line-height:1.2; font-weight:400; color:#2E2E2E; margin:0 0 12px;">Privacy Policy</h1>
-    <p style="font-size:14px; font-weight:300; color:#5F5F5F; margin:0 0 40px;">Draft. Menopause Understood (ABN 41 823 903 951).</p>
-  </section>
-
-  <section style="max-width:760px; margin:0 auto; padding:0 clamp(20px,4vw,32px) clamp(56px,8vw,96px); display:flex; flex-direction:column; gap:36px;">
-    <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="6">
-      <div>
-        <h2 style="font-size:19px; font-weight:500; color:#2E2E2E; margin:0 0 14px;">{{ sec.heading }}</h2>
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <sc-for list="{{ sec.paragraphs }}" as="p" hint-placeholder-count="2">
-            <p style="font-size:15px; font-weight:300; color:#5F5F5F; line-height:1.8; margin:0;">{{ p }}</p>
-          </sc-for>
-        </div>
-      </div>
-    </sc-for>
+    <h1 style="font-size:clamp(28px,4.5vw,40px); line-height:1.2; font-weight:400; color:#2E2E2E; margin:0 0 18px;">Privacy Policy</h1>
+    <p style="font-size:16px; line-height:1.8; font-weight:300; color:#5F5F5F; margin:0 0 32px;">Please view the Menopause Understood Privacy Policy.</p>
+    <a href="https://raw.githubusercontent.com/melissatahu04/my-claude-website-v2/main/Menopause%20Understood_Privacy%20Policy.pdf" target="_blank" rel="noopener" style="display:inline-block; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:14px 32px; border-radius:26px; font-size:15px; font-weight:500;" style-hover="background:#6F3569;">Open Privacy Policy</a>
   </section>
 
   <dc-import name="Footer" hint-size="100%,320px"></dc-import>
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  sections = [
-    { heading: '1. About This Policy', paragraphs: [
-      'Menopause Understood ("we", "us", "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store and disclose personal information in connection with our website (menopauseunderstood.com.au), online courses, Menopause Community Workshops, and workplace packages.',
-      'This policy is intended to align with the Australian Privacy Principles (APPs) under the Privacy Act 1988 (Cth).',
-      'Menopause Understood (ABN 41 823 903 951), trading as Menopause Understood, is the entity responsible for the personal information this policy describes.',
-    ]},
-    { heading: '2. Personal Information We Collect', paragraphs: [
-      "Contact details: Your name and email address, collected at checkout, through our website, or when you contact us directly.",
-      "Purchase information: Which courses, bundles or services you've purchased, your purchase history, and payment confirmation. We do not collect or store your full card details; this is handled directly by our payment processor, Stripe.",
-      "Checkout responses: Answers to optional checkout questions, such as how you heard about us.",
-      "Gift purchase: If you buy a course as a gift, we also collect the recipient's name and email address to grant them access.",
-      "Booking details: Information provided when booking a Menopause Community Workshop or workplace session, including through our event ticketing provider, Humanitix.",
-      "Correspondence: Any information you share with us directly, such as emails, enquiries, or feedback.",
-      "Menopause Understood is an educational service, not a clinical one. We do not ask for or require personal health information in order to purchase a course. If you choose to share health-related information with us, for example, in workshop discussions or written correspondence, we treat this as sensitive information and handle it with the additional care described in Section 7.",
-    ]},
-    { heading: '3. How We Collect Your Information', paragraphs: [
-      'We collect personal information directly from you when you make a purchase, book a workshop, subscribe to our newsletter, or contact us. We also collect information through the third-party platforms we use to run Menopause Understood, listed in Section 6.',
-    ]},
-    { heading: '4. Why We Collect and Use Your Information', paragraphs: [
-      "To process your purchase and give you access to the course you've bought.",
-      'To manage workshop and workplace bookings.',
-      'To respond to your enquiries and provide customer support.',
-      'To send you receipts and essential service communications.',
-      'With your consent, to send marketing communications such as our newsletter. See Section 5 for how to opt out.',
-      'To understand which marketing channels are working, using your response to the optional "how did you hear about us" checkout question.',
-      'To comply with our legal, tax and accounting obligations.',
-    ]},
-    { heading: '5. Marketing Communications', paragraphs: [
-      'If you subscribe to our newsletter or provide your email address, we may send you marketing communications using Brevo, our email marketing platform. You can unsubscribe at any time using the link included in any marketing email, or by contacting us directly at hello@menopauseunderstood.com.au.',
-    ]},
-    { heading: '6. Who We Share Your Information With', paragraphs: [
-      "We don't sell your personal information. We share it only with the trusted third-party platforms we rely on to run Menopause Understood, each of which handles information according to its own privacy policy:",
-      'Payhip: Hosts and delivers our courses, and processes checkout and account details.',
-      'Stripe: Processes payments; we do not see or store your full card details.',
-      'Brevo: Manages our email marketing and newsletter list.',
-      'Humanitix: Manages workshop and event bookings.',
-      'Google Workspace: Our business email provider.',
-      'Vercel: Hosts our website.',
-      'Some of these providers may store or process information on servers located overseas, including in the United States. By using our services, you consent to this overseas disclosure where applicable.',
-    ]},
-    { heading: '7. Sensitive and Health Information', paragraphs: [
-      'Because Menopause Understood operates in a health-adjacent space, we take extra care with any health-related information you choose to share with us, including in community workshops or peer discussions. We only use this information for the purpose it was shared, for example, tailoring workshop content or understanding participant needs, and do not use it for unrelated marketing or profiling without your consent.',
-    ]},
-    { heading: '8. Data Security', paragraphs: [
-      "We take reasonable steps to protect the personal information we hold from misuse, loss, and unauthorised access, including relying on the security measures of our third-party platform providers, such as Payhip and Stripe's PCI-compliant payment processing. No method of storage or transmission over the internet is completely secure, and we cannot guarantee absolute security.",
-    ]},
-    { heading: '9. Cookies and Website Analytics', paragraphs: [
-      'Our website currently uses only essential cookies required for the site to function. We do not use third-party analytics or advertising tools such as Google Analytics or Meta Pixel. If this changes, we will update this policy and, where required, request your consent.',
-    ]},
-    { heading: '10. Access and Correction', paragraphs: [
-      'You can ask us for access to the personal information we hold about you, or ask us to correct it, by contacting us at hello@menopauseunderstood.com.au. We will respond within a reasonable timeframe.',
-    ]},
-    { heading: '11. Making a Complaint', paragraphs: [
-      "If you have a concern about how we've handled your personal information, please contact us first at hello@menopauseunderstood.com.au so we can try to resolve it directly. If you're not satisfied with our response, you can lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au.",
-    ]},
-    { heading: '12. Changes to This Policy', paragraphs: [
-      'We may update this Privacy Policy from time to time. The updated version will be posted on our website with a new effective date.',
-    ]},
-    { heading: '13. Contact Us', paragraphs: [
-      'Menopause Understood, trading as Menopause Understood',
-      'ABN: 41 823 903 951',
-      'Email: hello@menopauseunderstood.com.au',
-    ]},
-  ];
-  renderVals() {
-    return { sections: this.sections };
-  }
-}
-
-</script>
 </body>
 </html>

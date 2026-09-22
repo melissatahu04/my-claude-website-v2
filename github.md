@@ -2,24 +2,14 @@ repo: melissatahu04/my-claude-website-v2
 branch: main
 
 ## Last sync
-date: 2026-08-20T00:47:54Z
+date: 2026-09-22T04:29:00Z
+commit: caf50de4d08c6c3172b347ca5231c25e5360d883
 
 ### Updated in this project
-- Repo connected as source for MU Website project (read-only reference; no push access from here).
-- Repo's current files are an earlier version; latest work (NewsletterModal, mailto links, social links) exists only in this project pending manual upload.
+- Privacy Policy and Terms & Conditions pages now link to the solicitor-approved PDFs, hosted directly in the GitHub repo (root: `Menopause Understood_Privacy Policy.pdf`, `Menopause Understood_Website Terms and Conditions.pdf`) via raw.githubusercontent.com — not copied into the project (PDFs are outside the importable-asset allowlist).
 
 ## Screen map
-| Project screen | Repo file |
+| Screen | Repo files |
 |---|---|
-| index.dc.html | index.dc.html |
-| about.dc.html | about.dc.html |
-| courses.dc.html | courses.dc.html |
-| course-1.dc.html | (not in repo) |
-| events.dc.html | events.dc.html |
-| Footer.dc.html | Footer.dc.html |
-| Icon.dc.html | Icon.dc.html |
-| Nav.dc.html | Nav.dc.html |
-| resources.dc.html | resources.dc.html |
-| workplace.dc.html | workplace.dc.html |
-| workshops.dc.html | workshops.dc.html |
-| NewsletterModal.dc.html | (not in repo) |
+| privacy.dc.html | linked to raw GitHub PDF (Privacy Policy) |
+| terms.dc.html | linked to raw GitHub PDF (Terms and Conditions) |
