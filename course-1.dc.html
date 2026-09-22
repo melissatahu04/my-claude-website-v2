@@ -23,6 +23,7 @@
       #course-hero { grid-template-columns: 1fr !important; }
       #enrol-card { position: static !important; }
     }
+      @media (max-width:640px){html{zoom:0.9}}
   </style>
 </helmet>
 <dc-import name="CookieBanner" hint-size="100%,60px"></dc-import>
@@ -31,16 +32,15 @@
 
   <section id="course-hero" style="max-width:1100px; margin:0 auto; padding:clamp(40px,6vw,64px) clamp(20px,4vw,32px) clamp(28px,4vw,40px); display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(32px,5vw,56px); align-items:start;">
     <div>
-      <h1 style="font-size:clamp(28px,4vw,42px); line-height:1.2; font-weight:500; color:#2E2E2E; margin:0 0 14px;">Finally understand what's happening to your body, at your own pace.</h1>
-      <p style="font-size:17px; line-height:1.7; font-weight:300; color:#5F5F5F; margin:0 0 28px;">A clear, research-backed guide to every stage of perimenopause, menopause and postmenopause. Stop guessing, and feel a little more like yourself again.</p>
-      <p style="font-size:16px; line-height:1.8; font-weight:300; color:#5F5F5F; margin:0 0 20px;">You're not overreacting, and you're not imagining it. What you're feeling is so valid, and there's a reason for it. This short course walks you through what's happening in your body, one stage at a time.</p>
-      <div style="font-size:16px; font-weight:400; color:#2E2E2E; margin:0 0 14px;">In this course, you'll:</div>
-      <div style="margin:0 0 26px; display:flex; flex-direction:column; gap:14px;">
-        <div style="display:flex; align-items:flex-start; gap:12px;"><dc-import name="Icon" type="check" size="18" color="#A64F9D" hint-size="18px,18px"></dc-import><div style="font-size:15.5px; font-weight:300; color:#5F5F5F; line-height:1.6;">Understand exactly what's happening in your body right now, and why</div></div>
-        <div style="display:flex; align-items:flex-start; gap:12px;"><dc-import name="Icon" type="check" size="18" color="#A64F9D" hint-size="18px,18px"></dc-import><div style="font-size:15.5px; font-weight:300; color:#5F5F5F; line-height:1.6;">Get a clearer sense of which stage of your journey you're likely in</div></div>
-        <div style="display:flex; align-items:flex-start; gap:12px;"><dc-import name="Icon" type="check" size="18" color="#A64F9D" hint-size="18px,18px"></dc-import><div style="font-size:15.5px; font-weight:300; color:#5F5F5F; line-height:1.6;">Learn from real, published research, in language that actually makes sense</div></div>
+      <h1 style="font-size:clamp(28px,4vw,42px); line-height:1.2; font-weight:500; color:#2E2E2E; margin:0 0 14px;">Make sense of what your body is going through, one stage at a time.</h1>
+      <p style="font-size:17px; line-height:1.7; font-weight:400; color:#5F5F5F; margin:0 0 28px;">A short, research-backed course that walks you through all six stages of the menopause journey, so you know where you're likely to be and what tends to come next.</p>
+      <p style="font-size:16px; line-height:1.8; font-weight:400; color:#5F5F5F; margin:0 0 20px;">You're not overreacting, and you're not imagining it. What you're feeling is completely valid, and there's a reason for it.</p>
+      <div style="font-size:16px; font-weight:400; color:#2E2E2E; margin:0 0 14px;">By the end, you'll be able to:</div>
+      <div style="margin:0; display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:flex-start; gap:12px;"><dc-import name="Icon" type="check" size="18" color="#A64F9D" hint-size="18px,18px"></dc-import><div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.6;">Identify which of the six stages you're most likely in</div></div>
+        <div style="display:flex; align-items:flex-start; gap:12px;"><dc-import name="Icon" type="check" size="18" color="#A64F9D" hint-size="18px,18px"></dc-import><div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.6;">Know which stage tends to come next, so changes don't catch you off guard</div></div>
+        <div style="display:flex; align-items:flex-start; gap:12px;"><dc-import name="Icon" type="check" size="18" color="#A64F9D" hint-size="18px,18px"></dc-import><div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.6;">Explain where your body is, whether to your doctor, your partner, or yourself</div></div>
       </div>
-      <p style="font-size:16px; line-height:1.8; font-weight:300; color:#5F5F5F; margin:0;">If you've ever felt confused, dismissed, or completely alone trying to figure out what's happening to your body, you're not on your own.</p>
     </div>
     <div id="enrol-card" style="background:#FFFFFF; border:2px solid #A64F9D; border-radius:20px; overflow:hidden; display:flex; flex-direction:column; position:sticky; top:24px;">
       <div style="padding:clamp(26px,4vw,32px) clamp(24px,4vw,30px) clamp(22px,3vw,26px); display:flex; flex-direction:column; gap:20px;">
@@ -55,18 +55,18 @@
         </div>
 
         <div style="display:flex; flex-direction:column; gap:12px;">
-          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px;"><span style="flex:none; font-size:11.5px; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; color:#A64F9D;">Format</span><span style="font-size:13.5px; font-weight:300; color:#5F5F5F; line-height:1.5; text-align:right;">Self-paced, online</span></div>
-          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px;"><span style="flex:none; font-size:11.5px; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; color:#A64F9D;">Access</span><span style="font-size:13.5px; font-weight:300; color:#5F5F5F; line-height:1.5; text-align:right;">Instant, lifetime</span></div>
-          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px;"><span style="flex:none; font-size:11.5px; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; color:#A64F9D;">Includes</span><span style="font-size:13.5px; font-weight:300; color:#5F5F5F; line-height:1.5; text-align:right;">A free resource to keep</span></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px;"><span style="flex:none; font-size:11.5px; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; color:#A64F9D;">Format</span><span style="font-size:13.5px; font-weight:400; color:#5F5F5F; line-height:1.5; text-align:right;">Short, self-paced, online</span></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px;"><span style="flex:none; font-size:11.5px; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; color:#A64F9D;">Access</span><span style="font-size:13.5px; font-weight:400; color:#5F5F5F; line-height:1.5; text-align:right;">Instant, lifetime</span></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:14px;"><span style="flex:none; font-size:11.5px; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; color:#A64F9D;">Includes</span><span style="font-size:13.5px; font-weight:400; color:#5F5F5F; line-height:1.5; text-align:right;">Free takeaway resource</span></div>
         </div>
 
         <a href="https://payhip.com/order?link=oclaB" style="width:100%; box-sizing:border-box; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:16px 0; border-radius:28px; font-size:15.5px; font-weight:500; text-align:center;" style-hover="background:#6F3569;">Enrol Now</a>
       </div>
 
       <div style="border-top:1px solid #F0E4EA; padding:16px clamp(24px,4vw,30px) 18px; display:flex; flex-direction:column; gap:10px; align-items:center; text-align:center; background:#FDFAFB;">
-        <a href="https://payhip.com/auth/login" target="_blank" rel="noopener" style="font-size:12.5px; font-weight:400; color:#A75298; text-decoration:none;" style-hover="text-decoration:underline;">Already enrolled? Access your course</a>
-        <div style="display:flex; align-items:flex-start; justify-content:center; gap:6px; font-family:'Poppins',sans-serif; font-size:11px; font-weight:400; color:#3A2F35; line-height:1.6; opacity:0.75;"><span style="flex:none; display:flex; align-items:center; line-height:0; height:17.6px;"><dc-import name="Icon" type="lock" size="12" color="#3A2F35" hint-size="12px,12px" aria-hidden="true"></dc-import></span><span>Secure checkout via Payhip, processed by Stripe. Card details are never stored on our site.</span></div>
-        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2px 8px; font-family:'Poppins',sans-serif; font-size:10.5px; font-weight:400; color:#3A2F35; opacity:0.75;">
+        <a href="https://payhip.com/auth/login" target="_blank" rel="noopener" style="font-size:13px; font-weight:400; color:#A75298; text-decoration:none;" style-hover="text-decoration:underline;">Already enrolled? Access your course</a>
+        <div style="display:flex; align-items:flex-start; justify-content:center; gap:6px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:400; color:#3A2F35; line-height:1.6;"><span style="flex:none; display:flex; align-items:center; line-height:0; height:17.6px;"><dc-import name="Icon" type="lock" size="12" color="#3A2F35" hint-size="12px,12px" aria-hidden="true"></dc-import></span><span>Secure checkout via Payhip, processed by Stripe. Your card details are never stored on our site.</span></div>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2px 8px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:400; color:#3A2F35;">
           <a href="/terms" style="color:#3A2F35; text-decoration:none;" style-hover="text-decoration:underline;">Terms</a>
           <span aria-hidden="true" style="opacity:0.5;">·</span>
           <a href="/privacy" style="color:#3A2F35; text-decoration:none;" style-hover="text-decoration:underline;">Privacy</a>
@@ -77,17 +77,18 @@
 
   <section style="max-width:760px; margin:0 auto; padding:0 clamp(20px,4vw,32px) clamp(48px,7vw,72px); display:flex; flex-direction:column; gap:20px;">
     <p style="font-size:23px; line-height:1.5; font-weight:400; font-style:italic; color:#A64F9D; margin:8px 0; text-align:center;">Most of us were never taught about menopause, so when symptoms start, it's easy to think there's something wrong with you.</p>
-    <p style="font-size:16px; line-height:1.85; font-weight:300; color:#5F5F5F; margin:0;">Maybe you've fallen down a million rabbit holes of reels and podcasts and left feeling more confused than when you started. Maybe you've tried to explain it to your doctor, your partner, or your friends, and felt dismissed. It's okay that this is hard, and it's okay that you're looking for answers.</p>
-    <p style="font-size:23px; line-height:1.5; font-weight:400; font-style:italic; color:#A64F9D; margin:8px 0; text-align:center;">That's why "What's Happening to Me? Understanding Every Stage of Your Menopause Journey" was created: a short course that covers the full menopause journey, from the reproductive years through to life after menopause.</p>
-    <p style="font-size:16px; line-height:1.85; font-weight:300; color:#5F5F5F; margin:0;">You'll walk through it all in order, so you finish with a clearer sense of where you likely stand, and a free resource to keep.</p>
+    <p style="font-size:16px; line-height:1.85; font-weight:400; color:#5F5F5F; margin:0;">Maybe you've fallen down a million rabbit holes of reels and podcasts and left feeling more confused than when you started. Maybe you've tried to explain it to your doctor, your partner, or your friends, and felt dismissed. It's okay that this is hard, and it's okay that you're looking for answers.</p>
+    <p style="font-size:23px; line-height:1.5; font-weight:400; font-style:italic; color:#A64F9D; margin:8px 0; text-align:center;">That's why I created What's Happening to Me? Understanding Every Stage of Your Menopause Journey.</p>
+    <p style="font-size:16px; line-height:1.85; font-weight:400; color:#5F5F5F; margin:0;">It's a short course that walks you through the whole journey in order, from your first cycle changes to life after menopause, so you can stop piecing it together from scattered information online.</p>
   </section>
 
   <section style="background:#FFFFFF; border-top:1px solid #E8DDE3; border-bottom:1px solid #E8DDE3; padding:clamp(48px,7vw,72px) clamp(20px,4vw,32px);">
     <div style="max-width:760px; margin:0 auto;">
       <h2 style="font-size:clamp(24px,3.5vw,30px); font-weight:400; color:#2E2E2E; margin:0 0 28px; text-align:center;">What's Included</h2>
-      <div style="display:flex; align-items:flex-start; justify-content:space-between; margin:0 0 40px; overflow-x:auto; gap:4px;">
+      <sc-if value="{{ notMobile }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex; align-items:flex-start; justify-content:space-between; margin:0 0 40px; gap:4px;">
         <sc-for list="{{ stages }}" as="stage" hint-placeholder-count="6">
-          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; flex:1; min-width:80px; position:relative;">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; flex:1; min-width:0; position:relative;">
             <sc-if value="{{ $index }}" hint-placeholder-val="{{ 0 }}">
               <div style="width:100%; height:2px; background:#E8DDE3; position:absolute; top:7px; left:-50%; z-index:0;"></div>
             </sc-if>
@@ -96,12 +97,23 @@
           </div>
         </sc-for>
       </div>
+      </sc-if>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex; flex-direction:column; margin:0 0 32px; padding-left:4px;">
+        <sc-for list="{{ stages }}" as="stage" hint-placeholder-count="6">
+          <div style="display:flex; align-items:center; gap:14px; position:relative; padding:7px 0;">
+            <div style="position:absolute; left:7px; top:0; bottom:0; width:2px; background:#E8DDE3; z-index:0;"></div>
+            <div style="flex:none; width:16px; height:16px; border-radius:50%; background:{{ stage.color }}; border:3px solid #FFFFFF; box-sizing:content-box; margin-left:-3px; z-index:1;"></div>
+            <div style="font-size:14px; font-weight:400; color:#5F5F5F; line-height:1.4;">{{ stage.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+      </sc-if>
       <div style="margin:0; display:flex; flex-direction:column; gap:18px;">
-        <div style="display:flex; align-items:flex-start; gap:14px;"><dc-import name="Icon" type="leaf" size="20" color="#A64F9D" hint-size="20px,20px"></dc-import><div style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.7;">A self-paced course covering all six stages of the journey, from your first cycle changes to life after menopause, in language that's easy to follow.</div></div>
-        <div style="display:flex; align-items:flex-start; gap:14px;"><dc-import name="Icon" type="leaf" size="20" color="#A64F9D" hint-size="20px,20px"></dc-import><div style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.7;">A clearer understanding of your own body and where you're likely at.</div></div>
-        <div style="display:flex; align-items:flex-start; gap:14px;"><dc-import name="Icon" type="leaf" size="20" color="#A64F9D" hint-size="20px,20px"></dc-import><div style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.7;">A free takeaway resource summarising each stage, to revisit, track, or bring to your next appointment with a doctor or healthcare professional.</div></div>
-        <div style="display:flex; align-items:flex-start; gap:14px;"><dc-import name="Icon" type="leaf" size="20" color="#A64F9D" hint-size="20px,20px"></dc-import><div style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.7;">Grounded in real, published research and filtered through my own lived experience, so you don't have to piece it together yourself.</div></div>
-        <div style="display:flex; align-items:flex-start; gap:14px;"><dc-import name="Icon" type="leaf" size="20" color="#A64F9D" hint-size="20px,20px"></dc-import><div style="font-size:16px; font-weight:300; color:#5F5F5F; line-height:1.7;">$37, no catches. Just a starting point when you need one.</div></div>
+        <div style="display:flex; align-items:flex-start; gap:14px;"><dc-import name="Icon" type="leaf" size="20" color="#A64F9D" hint-size="20px,20px"></dc-import><div style="font-size:16px; font-weight:400; color:#5F5F5F; line-height:1.7;">A short, self-paced course covering all six stages, in plain, easy-to-follow language.</div></div>
+        <div style="display:flex; align-items:flex-start; gap:14px;"><dc-import name="Icon" type="leaf" size="20" color="#A64F9D" hint-size="20px,20px"></dc-import><div style="font-size:16px; font-weight:400; color:#5F5F5F; line-height:1.7;">A free takeaway resource summarising each stage, to revisit, track, or bring to your next appointment with a doctor or healthcare professional.</div></div>
+        <div style="display:flex; align-items:flex-start; gap:14px;"><dc-import name="Icon" type="leaf" size="20" color="#A64F9D" hint-size="20px,20px"></dc-import><div style="font-size:16px; font-weight:400; color:#5F5F5F; line-height:1.7;">Grounded in real, published research, so you can trust what you're learning.</div></div>
+        <div style="display:flex; align-items:flex-start; gap:14px;"><dc-import name="Icon" type="leaf" size="20" color="#A64F9D" hint-size="20px,20px"></dc-import><div style="font-size:16px; font-weight:400; color:#5F5F5F; line-height:1.7;">A one-off $37, with lifetime access. No subscription and no catch, so you can come back to it whenever you need.</div></div>
       </div>
     </div>
   </section>
@@ -111,8 +123,8 @@
     <div style="display:flex; justify-content:center; margin:0 0 24px;">
       <image-slot id="course1-melissa-photo" style="width:120px; height:120px;" shape="circle" src="assets/melissa-photo.jpg" placeholder="Melissa's photo"></image-slot>
     </div>
-    <p style="font-size:16px; line-height:1.85; font-weight:300; color:#5F5F5F; margin:0;">I'm Melissa. I'm currently completing a Master of Medical Science, where I'm researching women's interactions with menopause health information and services. But before any of that, I was a woman diagnosed with early menopause at 41, with more symptoms than I could count and no idea what was happening to me.</p>
-    <p style="font-size:16px; line-height:1.85; font-weight:300; color:#5F5F5F; margin:0;">That experience, plus my research and the women I've met through the peer groups I facilitate, is what this course is built on. Real understanding, not just theory.</p>
+    <p style="font-size:16px; line-height:1.85; font-weight:400; color:#5F5F5F; margin:0;">I'm Melissa. I'm currently completing a Master of Medical Science, where I'm researching women's interactions with menopause health information and services. But before any of that, I was a woman diagnosed with early menopause at 41, with more symptoms than I could count and no idea what was happening to me.</p>
+    <p style="font-size:16px; line-height:1.85; font-weight:400; color:#5F5F5F; margin:0;">That experience, plus my research and the women I've met as a menopause peer group facilitator, is what this course is built on. It's the course I wish I'd had.</p>
   </section>
 
   <section style="background:#FFFFFF; border-top:1px solid #E8DDE3; border-bottom:1px solid #E8DDE3; padding:clamp(48px,7vw,72px) clamp(20px,4vw,32px);">
@@ -123,10 +135,10 @@
           <div style="border-bottom:1px solid #E8DDE3;">
             <button onClick="{{ faq.toggle }}" aria-expanded="{{ faq.open }}" style="width:100%; background:none; border:none; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; cursor:pointer; font-family:'Poppins',sans-serif;">
               <div style="font-size:17px; font-weight:500; color:#2E2E2E;">{{ faq.q }}</div>
-              <div style="font-size:20px; font-weight:300; color:#A64F9D; flex-shrink:0;">{{ faq.symbol }}</div>
+              <div style="font-size:20px; font-weight:400; color:#A64F9D; flex-shrink:0;">{{ faq.symbol }}</div>
             </button>
             <sc-if value="{{ faq.open }}" hint-placeholder-val="{{ false }}">
-              <div style="font-size:15.5px; font-weight:300; color:#5F5F5F; line-height:1.75; padding:0 0 20px;">{{ faq.a }}</div>
+              <div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.75; padding:0 0 20px;">{{ faq.a }}</div>
             </sc-if>
           </div>
         </sc-for>
@@ -135,11 +147,11 @@
   </section>
 
   <section style="max-width:680px; margin:0 auto; padding:clamp(48px,8vw,80px) clamp(20px,4vw,32px); text-align:center;">
-    <p style="font-size:16px; line-height:1.85; font-weight:300; color:#5F5F5F; margin:0 0 16px;">You don't have to keep working this out on your own. You can walk away with a clearer sense of what's happening in your body, and a free resource to keep coming back to.</p>
-    <p style="font-size:16px; line-height:1.85; font-weight:300; color:#5F5F5F; margin:0 0 32px;">Be gentle with yourself. You've been carrying a lot, and you deserve to understand what's going on with your own body.</p>
+    <p style="font-size:16px; line-height:1.85; font-weight:400; color:#5F5F5F; margin:0 0 16px;">You don't have to keep working this out on your own. In one short course, you can know which stage you're likely in, what tends to come next, and have a free resource to keep coming back to.</p>
+    <p style="font-size:16px; line-height:1.85; font-weight:400; color:#5F5F5F; margin:0 0 32px;">Be gentle with yourself. You've been carrying a lot, and you deserve to understand your own body.</p>
     <a href="https://payhip.com/order?link=oclaB" style="display:inline-block; background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:16px 34px; border-radius:28px; font-size:16px; font-weight:500;" style-hover="background:#6F3569;">Enrol Now</a>
-    <div style="margin-top:12px;"><a href="https://payhip.com/auth/login" target="_blank" rel="noopener" style="font-size:12.5px; font-weight:400; color:#A75298; text-decoration:none;" style-hover="text-decoration:underline;">Already enrolled? Access your course</a></div>
-    <div style="margin-top:18px; display:flex; flex-direction:column; gap:6px; align-items:center; font-family:'Poppins',sans-serif; font-size:12px; font-weight:400; color:#3A2F35; line-height:1.6;">
+    <div style="margin-top:12px;"><a href="https://payhip.com/auth/login" target="_blank" rel="noopener" style="font-size:13px; font-weight:400; color:#A75298; text-decoration:none;" style-hover="text-decoration:underline;">Already enrolled? Access your course</a></div>
+    <div style="margin-top:18px; display:flex; flex-direction:column; gap:6px; align-items:center; font-family:'Poppins',sans-serif; font-size:13px; font-weight:400; color:#3A2F35; line-height:1.6;">
       <div style="display:flex; align-items:center; justify-content:center; gap:6px;"><dc-import name="Icon" type="lock" size="13" color="#3A2F35" hint-size="13px,13px" aria-hidden="true"></dc-import><span>Secure checkout via Payhip, processed by Stripe. Your card details are never stored on our site.</span></div>
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:4px 10px;">
         <a href="/terms" style="color:#3A2F35; text-decoration:none;" style-hover="text-decoration:underline;">Terms &amp; Conditions</a>
@@ -155,16 +167,31 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  handleResize = () => {
+    const m = window.innerWidth < 640;
+    if (m !== this.state.isMobile) this.setState({ isMobile: m });
+  };
+  componentDidMount() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
   state = {
+    isMobile: false,
     faqs: [
       { q: "Is this a diagnosis?", a: "No. This course is here to educate, not diagnose. It's a starting point, not a replacement for seeing your doctor or healthcare professional.", open: true },
-      { q: "How is this different from free information online?", a: "Free resources are great, and worth using too. This course is different. It's a guided, self-paced walkthrough with warmth and validation built in, not just information. It's filtered through my own experience with early menopause, so you're met with understanding, not just facts.", open: false },
-      { q: "What if I'm not sure this course is right for me?", a: "If you're feeling confused, dismissed, or unsure what's happening in your body during perimenopause, menopause or postmenopause, this was built for you.", open: false },
-      { q: "Do I need to go through it all in one sitting?", a: "No, it's self-paced. Go through it whenever it suits you.", open: false },
+      { q: "How is this different from free information online?", a: "Free information is everywhere, but it's scattered and often contradictory. This course brings it together in one clear, guided walkthrough, in order, grounded in published research and written with warmth, so you're not left piecing it together yourself.", open: false },
+      { q: "What if I'm not sure this course is right for me?", a: "If you're trying to work out which stage you're in, this course is for you. Your cycle may have only just started changing, you may be in the thick of symptoms, or your last period may be well behind you. Wherever you are, it'll help you make sense of it and see what tends to come next. It's also a good fit if you want to feel prepared, or to support someone you love through it.", open: false },
+      { q: "How long does it take?", a: "It's a short course, designed to fit into a busy day. It's self-paced, so you can do it in one go or come back to it whenever suits you.", open: false },
+      { q: "What happens after I enrol?", a: "You'll get instant access through Payhip straight after checkout. The course and your free takeaway resource are yours to keep, with lifetime access.", open: false },
     ],
   };
   renderVals() {
     return {
+      isMobile: this.state.isMobile,
+      notMobile: !this.state.isMobile,
       stages: [
         { label: "Reproductive Years", color: "#E3D3E3" },
         { label: "Early Perimenopause", color: "#C9A0C9" },

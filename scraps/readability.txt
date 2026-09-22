@@ -1,0 +1,49 @@
+
+=== index: FK grade 8.3, 13 sentences, avg 13.9 words/sentence, 1 over 25 words
+  [31w] Menopause Understood began with one woman's own "why did no one tell me this?" moment, and grew into a place where you don't have to work it out on your own.
+
+=== about: FK grade 8.3, 36 sentences, avg 14.5 words/sentence, 5 over 25 words
+  [31w] One morning during my shower, after another bad night's sleep, I looked down at a body that had changed overnight and thought, "Why did no one ever tell me about menopause?
+  [32w] Surely I wasn't the only one going through this?" Those questions led me to enrol in a Master of Medical Science, where I'm researching women's interactions with menopause health information and services.
+  [30w] When I began volunteering as a menopause peer group facilitator and co-facilitator around the northern suburbs of Brisbane, I heard the same story again and again, just in different voices.
+  [29w] Through short courses that explain what's really happening in your body, and a real community of women who get it, you don't have to figure this out by yourself.
+  [26w] What I bring is research, lived experience, warmth, and a genuine commitment to making this stage of life feel less overwhelming and a lot less lonely.
+
+=== courses: FK grade 11.8, 17 sentences, avg 23.8 words/sentence, 8 over 25 words
+  [35w] Understanding Hot Flushes, Vaginal/Urinary Changes, and Other Symptoms An overview of the physical changes menopause can bring, from hot flushes to vaginal and urinary changes, so you know what to expect and why it happens.
+  [36w] It's Not Just in Your Head Understanding Your Mood, Memory and Joint Symptoms An overview of the mood, memory and joint changes that come with menopause, so you know they're real and not something you're imagining.
+  [35w] Understanding the Long-Term Health Changes That Come With Menopause An overview of the long-term menopause-related changes to your bones, heart and brain health, so you know why they happen and why understanding them now matters.
+  [29w] Without Warning, the Mask Was Gone An overview of how menopause and being neurodivergent can affect each other, so you know why that connection is worth paying attention to.
+  [27w] Nutrition, Sleep and Exercise During Menopause An overview of exercise, sleep and nutrition during menopause, so you know why each one matters more than you might think.
+  [33w] Understanding Stress, Capacity and Self-Care in Menopause An overview of what's really going on with your stress and capacity during menopause, so you know that making space for yourself isn't optional, it's necessary.
+  [37w] This Wasn't Supposed to Happen Yet Understanding Early, Induced and Premature Menopause An overview of early, induced and premature menopause, so you know your experience is just as valid even if it didn't follow the expected timeline.
+  [38w] Communicating with Your Doctor, Family and Friends About Menopause An overview of how to start the conversation, whether it's with your doctor, your partner or your friends, so you know you don't have to carry this by yourself.
+
+=== course-1: FK grade 7.0, 41 sentences, avg 16.3 words/sentence, 7 over 25 words
+  [29w] A short, research-backed course that walks you through all six stages of the menopause journey, so you know where you're likely to be and what tends to come next.
+  [51w] By the end, you'll be able to: Identify which of the six stages you're most likely in Know which stage tends to come next, so changes don't catch you off guard Explain where your body is, whether to your doctor, your partner, or yourself Secure checkout via Payhip, processed by Stripe.
+  [33w] It's a short course that walks you through the whole journey in order, from your first cycle changes to life after menopause, so you can stop piecing it together from scattered information online.
+  [30w] But before any of that, I was a woman diagnosed with early menopause at 41, with more symptoms than I could count and no idea what was happening to me.
+  [27w] In one short course, you can know which stage you're likely in, what tends to come next, and have a free resource to keep coming back to.
+  [28w] This course brings it together in one clear, guided walkthrough, in order, grounded in published research and written with warmth, so you're not left piecing it together yourself.
+  [36w] Whether your cycle has only just started changing, you're in the thick of symptoms, or you're well past your last period, it'll help you place where you're likely to be and what tends to come next.
+
+=== workshops: FK grade 7.7, 8 sentences, avg 15.0 words/sentence, 1 over 25 words
+  [30w] If you're part of a library, community centre, doctor's clinic or local group in South East Queensland and would like to host a session, we'd love to hear from you.
+
+=== workplace: FK grade 11.2, 7 sentences, avg 16.4 words/sentence, 1 over 25 words
+  [27w] Menopause symptoms affect concentration, confidence and wellbeing at work, and many women consider leaving their roles when their workplace doesn't understand or support what they're going through.
+
+=== resources: FK grade 7.2, 8 sentences, avg 11.0 words/sentence, 0 over 25 words
+
+=== events: FK grade 6.9, 4 sentences, avg 13.5 words/sentence, 0 over 25 words
+
+=== privacy: FK grade 12.4, 1 sentences, avg 7.0 words/sentence, 0 over 25 words
+
+=== terms: FK grade 8.9, 1 sentences, avg 9.0 words/sentence, 0 over 25 words
+
+=== Footer: FK grade 13.3, 5 sentences, avg 13.6 words/sentence, 0 over 25 words
+
+=== NewsletterModal: FK grade NaN, 0 sentences, avg NaN words/sentence, 0 over 25 words
+
+=== CookieBanner: FK grade 5.3, 2 sentences, avg 11.5 words/sentence, 0 over 25 words
