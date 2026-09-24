@@ -23,6 +23,26 @@
   window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "What's Happening to Me? Understanding Every Stage of Your Menopause Journey",
+  "description": "Not sure if you're in perimenopause, menopause or postmenopause? This short, self-paced course walks you through all six stages. $37, with instant access.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Menopause Understood",
+    "url": "https://www.menopauseunderstood.com.au/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "37",
+    "priceCurrency": "AUD",
+    "category": "Paid",
+    "url": "https://www.menopauseunderstood.com.au/course-1"
+  }
+}
+</script>
 </head>
 <body>
 <x-dc>
@@ -181,17 +201,51 @@
     <div style="max-width:760px; margin:0 auto;">
       <h2 style="font-size:clamp(24px,3.5vw,30px); font-weight:400; color:#2E2E2E; margin:0 0 32px; text-align:center;">FAQ</h2>
       <div style="display:flex; flex-direction:column; gap:0;">
-        <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="4">
-          <div style="border-bottom:1px solid #E8DDE3;">
-            <button onClick="{{ faq.toggle }}" aria-expanded="{{ faq.open }}" style="width:100%; background:none; border:none; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; cursor:pointer; font-family:'Poppins',sans-serif;">
-              <div style="font-size:17px; font-weight:500; color:#2E2E2E;">{{ faq.q }}</div>
-              <div style="font-size:20px; font-weight:400; color:#A64F9D; flex-shrink:0;">{{ faq.symbol }}</div>
+        <div style="border-bottom:1px solid #E8DDE3;">
+            <button onClick="{{ faq0.toggle }}" aria-expanded="{{ faq0.open }}" style="width:100%; background:none; border:none; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; cursor:pointer; font-family:'Poppins',sans-serif;">
+              <div style="font-size:17px; font-weight:500; color:#2E2E2E;">Is this a diagnosis?</div>
+              <div style="font-size:20px; font-weight:400; color:#A64F9D; flex-shrink:0;">{{ faq0.symbol }}</div>
             </button>
-            <sc-if value="{{ faq.open }}" hint-placeholder-val="{{ false }}">
-              <div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.75; padding:0 0 20px;">{{ faq.a }}</div>
+            <sc-if value="{{ faq0.open }}" hint-placeholder-val="{{ true }}">
+              <div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.75; padding:0 0 20px;">No. This course is here to educate, not diagnose. It's a starting point, not a replacement for seeing your doctor or healthcare professional.</div>
             </sc-if>
           </div>
-        </sc-for>
+          <div style="border-bottom:1px solid #E8DDE3;">
+            <button onClick="{{ faq1.toggle }}" aria-expanded="{{ faq1.open }}" style="width:100%; background:none; border:none; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; cursor:pointer; font-family:'Poppins',sans-serif;">
+              <div style="font-size:17px; font-weight:500; color:#2E2E2E;">How is this different from free information online?</div>
+              <div style="font-size:20px; font-weight:400; color:#A64F9D; flex-shrink:0;">{{ faq1.symbol }}</div>
+            </button>
+            <sc-if value="{{ faq1.open }}" hint-placeholder-val="{{ false }}">
+              <div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.75; padding:0 0 20px;">Free information is everywhere, but it's scattered and often contradictory. This course brings it together in one clear, guided walkthrough, in order, grounded in published research and written with warmth, so you're not left piecing it together yourself.</div>
+            </sc-if>
+          </div>
+          <div style="border-bottom:1px solid #E8DDE3;">
+            <button onClick="{{ faq2.toggle }}" aria-expanded="{{ faq2.open }}" style="width:100%; background:none; border:none; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; cursor:pointer; font-family:'Poppins',sans-serif;">
+              <div style="font-size:17px; font-weight:500; color:#2E2E2E;">What if I'm not sure this course is right for me?</div>
+              <div style="font-size:20px; font-weight:400; color:#A64F9D; flex-shrink:0;">{{ faq2.symbol }}</div>
+            </button>
+            <sc-if value="{{ faq2.open }}" hint-placeholder-val="{{ false }}">
+              <div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.75; padding:0 0 20px;">If you're trying to work out which stage you're in, this course is for you. Your cycle may have only just started changing, you may be in the thick of symptoms, or your last period may be well behind you. Wherever you are, it'll help you make sense of it and see what tends to come next. It's also a good fit if you want to feel prepared, or to support someone you love through it.</div>
+            </sc-if>
+          </div>
+          <div style="border-bottom:1px solid #E8DDE3;">
+            <button onClick="{{ faq3.toggle }}" aria-expanded="{{ faq3.open }}" style="width:100%; background:none; border:none; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; cursor:pointer; font-family:'Poppins',sans-serif;">
+              <div style="font-size:17px; font-weight:500; color:#2E2E2E;">How long does it take?</div>
+              <div style="font-size:20px; font-weight:400; color:#A64F9D; flex-shrink:0;">{{ faq3.symbol }}</div>
+            </button>
+            <sc-if value="{{ faq3.open }}" hint-placeholder-val="{{ false }}">
+              <div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.75; padding:0 0 20px;">It's a short course, designed to fit into a busy day. It's self-paced, so you can do it in one go or come back to it whenever suits you.</div>
+            </sc-if>
+          </div>
+          <div style="border-bottom:1px solid #E8DDE3;">
+            <button onClick="{{ faq4.toggle }}" aria-expanded="{{ faq4.open }}" style="width:100%; background:none; border:none; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; cursor:pointer; font-family:'Poppins',sans-serif;">
+              <div style="font-size:17px; font-weight:500; color:#2E2E2E;">What happens after I enrol?</div>
+              <div style="font-size:20px; font-weight:400; color:#A64F9D; flex-shrink:0;">{{ faq4.symbol }}</div>
+            </button>
+            <sc-if value="{{ faq4.open }}" hint-placeholder-val="{{ false }}">
+              <div style="font-size:15.5px; font-weight:400; color:#5F5F5F; line-height:1.75; padding:0 0 20px;">You'll get instant access through Payhip straight after checkout. The course and your free takeaway resource are yours to keep, with lifetime access.</div>
+            </sc-if>
+          </div>
       </div>
     </div>
   </section>
@@ -230,13 +284,7 @@ class Component extends DCLogic {
   }
   state = {
     isMobile: false,
-    faqs: [
-      { q: "Is this a diagnosis?", a: "No. This course is here to educate, not diagnose. It's a starting point, not a replacement for seeing your doctor or healthcare professional.", open: true },
-      { q: "How is this different from free information online?", a: "Free information is everywhere, but it's scattered and often contradictory. This course brings it together in one clear, guided walkthrough, in order, grounded in published research and written with warmth, so you're not left piecing it together yourself.", open: false },
-      { q: "What if I'm not sure this course is right for me?", a: "If you're trying to work out which stage you're in, this course is for you. Your cycle may have only just started changing, you may be in the thick of symptoms, or your last period may be well behind you. Wherever you are, it'll help you make sense of it and see what tends to come next. It's also a good fit if you want to feel prepared, or to support someone you love through it.", open: false },
-      { q: "How long does it take?", a: "It's a short course, designed to fit into a busy day. It's self-paced, so you can do it in one go or come back to it whenever suits you.", open: false },
-      { q: "What happens after I enrol?", a: "You'll get instant access through Payhip straight after checkout. The course and your free takeaway resource are yours to keep, with lifetime access.", open: false },
-    ],
+    faqOpen: [true, false, false, false, false],
   };
   renderVals() {
     return {
@@ -250,15 +298,11 @@ class Component extends DCLogic {
         { label: "Early Postmenopause", color: "#8E3A7D" },
         { label: "Late Postmenopause", color: "#7A2E6E" },
       ],
-      faqs: this.state.faqs.map((f, i) => ({
-        q: f.q,
-        a: f.a,
-        open: f.open,
-        symbol: f.open ? '−' : '+',
-        toggle: () => this.setState(s => ({
-          faqs: s.faqs.map((f2, i2) => i2 === i ? { ...f2, open: !f2.open } : f2)
-        })),
-      })),
+      ...Object.fromEntries(this.state.faqOpen.map((open, i) => ['faq' + i, {
+        open,
+        symbol: open ? '−' : '+',
+        toggle: () => this.setState(s => ({ faqOpen: s.faqOpen.map((o, i2) => i2 === i ? !o : o) })),
+      }])),
     };
   }
 }

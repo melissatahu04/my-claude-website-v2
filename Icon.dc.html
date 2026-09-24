@@ -140,10 +140,19 @@
     <path d="M29 6c1 5.5 4.5 9 10 9.5"></path>
   </svg>
 </sc-if>
+<sc-if value="{{ isLinkedin }}">
+  <svg viewBox="0 0 48 48" width="{{ px }}" height="{{ px }}" fill="none" stroke="{{ color }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7" y="7" width="34" height="34" rx="9"></rect>
+    <path d="M16 21v12"></path>
+    <path d="M16 15.5v0.5"></path>
+    <path d="M23 33V21"></path>
+    <path d="M23 26.5c0-3 2-5.5 5-5.5s5 2 5 5.5V33"></path>
+  </svg>
+</sc-if>
 </span>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:48,&quot;height&quot;:48}, &quot;type&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;heart&quot;,&quot;options&quot;:[&quot;course&quot;,&quot;peers&quot;,&quot;group&quot;,&quot;briefcase&quot;,&quot;mail&quot;,&quot;lightbulb&quot;,&quot;heart&quot;,&quot;target&quot;,&quot;chat&quot;,&quot;calendar&quot;,&quot;pin&quot;,&quot;clock&quot;,&quot;leaf&quot;,&quot;check&quot;,&quot;lock&quot;,&quot;instagram&quot;,&quot;facebook&quot;,&quot;tiktok&quot;,&quot;document&quot;],&quot;tsType&quot;:&quot;string&quot;}, &quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:28,&quot;min&quot;:16,&quot;max&quot;:96,&quot;tsType&quot;:&quot;number&quot;}, &quot;color&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#A64F9D&quot;,&quot;options&quot;:[&quot;#A64F9D&quot;,&quot;#6F3569&quot;,&quot;#5F5F5F&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:48,&quot;height&quot;:48}, &quot;type&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;heart&quot;,&quot;options&quot;:[&quot;course&quot;,&quot;peers&quot;,&quot;group&quot;,&quot;briefcase&quot;,&quot;mail&quot;,&quot;lightbulb&quot;,&quot;heart&quot;,&quot;target&quot;,&quot;chat&quot;,&quot;calendar&quot;,&quot;pin&quot;,&quot;clock&quot;,&quot;leaf&quot;,&quot;check&quot;,&quot;lock&quot;,&quot;instagram&quot;,&quot;facebook&quot;,&quot;tiktok&quot;,&quot;linkedin&quot;,&quot;document&quot;],&quot;tsType&quot;:&quot;string&quot;}, &quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:28,&quot;min&quot;:16,&quot;max&quot;:96,&quot;tsType&quot;:&quot;number&quot;}, &quot;color&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#A64F9D&quot;,&quot;options&quot;:[&quot;#A64F9D&quot;,&quot;#6F3569&quot;,&quot;#5F5F5F&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     const type = this.props.type || 'heart';
@@ -168,6 +177,7 @@ class Component extends DCLogic {
       isInstagram: type === 'instagram',
       isFacebook: type === 'facebook',
       isTiktok: type === 'tiktok',
+      isLinkedin: type === 'linkedin',
       isDocument: type === 'document',
     };
   }
