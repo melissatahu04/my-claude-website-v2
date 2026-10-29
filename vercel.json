@@ -1,5 +1,6 @@
 {
   "redirects": [
+    { "source": "/subscribe", "destination": "/?subscribe", "permanent": false },
     { "source": "/index.dc.html", "destination": "/", "permanent": true },
     { "source": "/course-1.dc.html", "destination": "/course-1", "permanent": true },
     { "source": "/courses.dc.html", "destination": "/courses", "permanent": true },
