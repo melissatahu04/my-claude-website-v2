@@ -191,7 +191,11 @@ class Component extends DCLogic {
       this.formRef.current.innerHTML = FORM_HTML;
     }
     window.__openNewsletterModal = () => this.setState({ open: true });
-    this.checkHash = () => { if (location.hash.toLowerCase() === '#subscribe') this.setState({ open: true }); };
+    this.checkHash = () => {
+      const h = location.hash.toLowerCase();
+      const q = new URLSearchParams(location.search);
+      if (h === '#subscribe' || q.has('subscribe')) this.setState({ open: true });
+    };
     this.checkHash();
     window.addEventListener('hashchange', this.checkHash);
     this.handleKeyDown = (e) => { if (e.key === 'Escape') this.close(); };
