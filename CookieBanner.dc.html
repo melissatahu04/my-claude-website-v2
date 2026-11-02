@@ -21,8 +21,12 @@ class Component extends DCLogic {
   state = { visible: false };
 
   componentDidMount() {
-    if (!localStorage.getItem('mu_cookie_consent')) this.setState({ visible: true });
+    if (localStorage.getItem('mu_cookie_consent')) return;
+    if (!this.props.waitForScroll) { this.setState({ visible: true }); return; }
+    this.onScroll = () => { if (window.scrollY > 600) { this.setState({ visible: true }); window.removeEventListener('scroll', this.onScroll); } };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
   }
+  componentWillUnmount() { if (this.onScroll) window.removeEventListener('scroll', this.onScroll); }
 
   accept = () => {
     localStorage.setItem('mu_cookie_consent', 'accepted');

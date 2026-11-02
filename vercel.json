@@ -1,26 +1,117 @@
 {
   "redirects": [
-    { "source": "/subscribe", "destination": "/?subscribe", "permanent": false },
-    { "source": "/index.dc.html", "destination": "/", "permanent": true },
-    { "source": "/course-1.dc.html", "destination": "/course-1", "permanent": true },
-    { "source": "/courses.dc.html", "destination": "/courses", "permanent": true },
-    { "source": "/about.dc.html", "destination": "/about", "permanent": true },
-    { "source": "/workshops.dc.html", "destination": "/workshops", "permanent": true },
-    { "source": "/workplace.dc.html", "destination": "/workplace", "permanent": true },
-    { "source": "/resources.dc.html", "destination": "/resources", "permanent": true },
-    { "source": "/events.dc.html", "destination": "/events", "permanent": true },
-    { "source": "/privacy.dc.html", "destination": "/privacy", "permanent": true },
-    { "source": "/terms.dc.html", "destination": "/terms", "permanent": true }
+    {
+      "source": "/subscribe",
+      "destination": "/?subscribe",
+      "permanent": false
+    },
+    {
+      "source": "/index.dc.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/course-1.dc.html",
+      "destination": "/course-1",
+      "permanent": true
+    },
+    {
+      "source": "/courses.dc.html",
+      "destination": "/courses",
+      "permanent": true
+    },
+    {
+      "source": "/about.dc.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/workshops.dc.html",
+      "destination": "/workshops",
+      "permanent": true
+    },
+    {
+      "source": "/workplace.dc.html",
+      "destination": "/workplace",
+      "permanent": true
+    },
+    {
+      "source": "/resources.dc.html",
+      "destination": "/resources",
+      "permanent": true
+    },
+    {
+      "source": "/events.dc.html",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.dc.html",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms.dc.html",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/thanks.dc.html",
+      "destination": "/thanks",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/course-1", "destination": "/course-1.dc.html" },
-    { "source": "/courses", "destination": "/courses.dc.html" },
-    { "source": "/about", "destination": "/about.dc.html" },
-    { "source": "/workshops", "destination": "/workshops.dc.html" },
-    { "source": "/workplace", "destination": "/workplace.dc.html" },
-    { "source": "/resources", "destination": "/resources.dc.html" },
-    { "source": "/events", "destination": "/events.dc.html" },
-    { "source": "/privacy", "destination": "/privacy.dc.html" },
-    { "source": "/terms", "destination": "/terms.dc.html" }
+    {
+      "source": "/course-1",
+      "destination": "/course-1.dc.html"
+    },
+    {
+      "source": "/courses",
+      "destination": "/courses.dc.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.dc.html"
+    },
+    {
+      "source": "/workshops",
+      "destination": "/workshops.dc.html"
+    },
+    {
+      "source": "/workplace",
+      "destination": "/workplace.dc.html"
+    },
+    {
+      "source": "/resources",
+      "destination": "/resources.dc.html"
+    },
+    {
+      "source": "/events",
+      "destination": "/events.dc.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.dc.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.dc.html"
+    },
+    {
+      "source": "/thanks",
+      "destination": "/thanks.dc.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/thanks",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
   ]
 }
