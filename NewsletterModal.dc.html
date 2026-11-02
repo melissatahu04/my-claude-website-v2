@@ -185,16 +185,17 @@ class Component extends DCLogic {
     window.__recaptchaBadgeObserver = observer;
   }
 
+  open = () => { this.ensureGlobalAssets(); this.setState({ open: true }); };
+
   componentDidMount() {
-    this.ensureGlobalAssets();
     if (this.formRef.current) {
       this.formRef.current.innerHTML = FORM_HTML;
     }
-    window.__openNewsletterModal = () => this.setState({ open: true });
+    window.__openNewsletterModal = this.open;
     this.checkHash = () => {
       const h = location.hash.toLowerCase();
       const q = new URLSearchParams(location.search);
-      if (h === '#subscribe' || q.has('subscribe')) this.setState({ open: true });
+      if (h === '#subscribe' || q.has('subscribe')) this.open();
     };
     this.checkHash();
     window.addEventListener('hashchange', this.checkHash);
