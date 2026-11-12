@@ -12,10 +12,9 @@
   <div ref="{{ dialogRef }}" role="dialog" aria-modal="true" aria-label="{{ dialogLabel }}" style="position:relative; max-width:540px; width:100%; font-family:'Poppins',sans-serif;" onClick="{{ stopClick }}">
     <button ref="{{ closeBtnRef }}" onClick="{{ close }}" aria-label="Close sign-up form" style="position:absolute; top:8px; right:8px; z-index:3; width:44px; height:44px; padding:0; display:flex; align-items:center; justify-content:center; background:#FFFFFF; border:1px solid #E8DDE3; border-radius:50%; box-shadow:0 2px 8px rgba(46,46,46,0.12); font-size:26px; line-height:1; color:#2E2E2E; cursor:pointer; font-family:'Poppins',sans-serif;" style-hover="border-color:#A64F9D; color:#A64F9D;">&#215;</button>
     <div style="background:#fbf5f6; border-radius:20px; max-height:calc(100vh - 32px); overflow-y:auto; -webkit-overflow-scrolling:touch;">
-      <div style="display:{{ promoDisplay }}; padding:30px 24px 0; text-align:center;">
-        <div style="font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#A64F9D; margin-bottom:12px;">Free download</div>
+      <div style="display:{{ promoDisplay }}; padding:54px 24px 0; text-align:center;">
         <h2 style="font-size:clamp(23px,6vw,28px); line-height:1.2; font-weight:600; color:#2E2E2E; margin:0 auto; max-width:380px; text-wrap:balance;">Get your free menopause symptom checklist</h2>
-        <p style="font-size:14px; line-height:1.5; font-weight:400; color:#5F5F5F; margin:8px auto 0; max-width:340px; text-wrap:balance;">Not sure what&#8217;s happening to your body? Start by ticking off the symptoms you&#8217;re noticing.</p>
+        <p style="font-size:14px; line-height:1.5; font-weight:400; color:#5F5F5F; margin:23px auto 0; max-width:none;">Not sure what&#8217;s happening to your body? Start<br>by ticking off the symptoms you&#8217;re noticing.</p>
       </div>
       <div ref="{{ formHostRef }}"></div>
     </div>
@@ -142,6 +141,7 @@ const GLOBAL_STYLE = `
   .mu-promo .form__entry, .mu-promo .form__label-row, .mu-promo .sib-form-block, .mu-promo .sib-form__declaration, .mu-promo .entry__choice{padding:0 !important; margin:0 !important; border:0 !important; background:transparent !important; display:block}
   .mu-promo .entry__label{display:block !important; font-family:'Poppins',Helvetica,sans-serif !important; font-size:15px !important; font-weight:500 !important; color:#2E2E2E !important; margin:0 0 6px !important; text-align:left !important}
   .mu-promo .entry__label::after{content:none !important}
+  .mu-promo .mu-row-email .entry__label{position:absolute !important; width:1px !important; height:1px !important; margin:-1px !important; padding:0 !important; overflow:hidden !important; clip:rect(0 0 0 0) !important; white-space:nowrap !important; border:0 !important}
   .mu-promo .entry__field{display:block !important; margin:0 !important; padding:0 !important; border:0 !important; background:transparent !important; box-shadow:none !important}
   .mu-promo #EMAIL{display:block !important; width:100% !important; box-sizing:border-box !important; height:48px !important; margin:0 !important; padding:0 14px !important; border:1px solid #D9C8D2 !important; border-radius:10px !important; background:#FFFFFF !important; box-shadow:none !important; font-family:'Poppins',Helvetica,sans-serif !important; font-size:16px !important; color:#2E2E2E !important; outline:none !important}
   .mu-promo #EMAIL:focus{border-color:#A64F9D !important; box-shadow:0 0 0 3px rgba(166,79,157,0.18) !important}
