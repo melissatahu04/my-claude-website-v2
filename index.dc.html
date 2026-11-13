@@ -55,6 +55,10 @@
     a { color:#A64F9D; }
     a:hover { color:#6F3569; }
       @media (max-width:640px){html{zoom:0.9}}
+    @media (min-width:780px){
+      .mu-hero-h1{font-size:min(2.9vw,40px) !important; line-height:1.2 !important}
+      .mu-hero-line{display:block; white-space:nowrap}
+    }
   </style>
 </helmet>
 <dc-import name="CookieBanner" hint-size="100%,60px"></dc-import>
@@ -63,8 +67,8 @@
 
   <section style="max-width:1200px; margin:0 auto; padding:clamp(48px,8vw,88px) clamp(20px,4vw,32px) clamp(56px,8vw,96px); display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:clamp(32px,6vw,64px); align-items:center;">
     <div>
-      <h1 style="font-size:clamp(32px,5.5vw,52px); line-height:1.15; font-weight:400; color:#2E2E2E; margin:0 0 24px;">Real support for perimenopause, menopause and beyond.</h1>
-      <p style="font-size:19px; line-height:1.7; font-weight:400; color:#5F5F5F; margin:0 0 36px; max-width:520px;">If you're feeling dismissed, confused or overwhelmed, you're in the right place. We offer clear education and warm community, so you can feel confident and supported through this stage of life.</p>
+      <h1 class="mu-hero-h1" style="font-size:clamp(32px,5.5vw,52px); line-height:1.15; font-weight:400; color:#2E2E2E; margin:0 0 24px;"><span class="mu-hero-line">You’re not broken.</span> <span class="mu-hero-line">Menopause is a big change.</span> <span class="mu-hero-line">Understanding it can help.</span></h1>
+      <p style="font-size:19px; line-height:1.7; font-weight:400; color:#5F5F5F; margin:0 0 36px; max-width:520px;">Menopause education for women, not clinicians. Developed by a menopause researcher and peer group facilitator who is living it herself.</p>
       <div style="display:flex; gap:16px; flex-wrap:wrap;">
         <a href="/courses" style="background:#A64F9D; color:#FFFFFF; text-decoration:none; padding:16px 32px; border-radius:28px; font-size:16px; font-weight:500;" style-hover="background:#6F3569;">Explore Our Courses</a>
         <a href="/about" style="background:#FFFFFF; color:#2E2E2E; text-decoration:none; padding:16px 32px; border-radius:28px; font-size:16px; font-weight:500; border:1px solid #E8DDE3;" style-hover="border-color:#A64F9D; color:#A64F9D;">Learn About Us</a>
